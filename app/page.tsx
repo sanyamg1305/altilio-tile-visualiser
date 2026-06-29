@@ -18,6 +18,7 @@ export default function GalleryPage() {
   const [presenting, setPresenting] = useState(false);
   const [presentStart, setPresentStart] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const fetchTiles = useCallback(async () => {
     const params = new URLSearchParams();
@@ -58,8 +59,28 @@ export default function GalleryPage() {
 
   return (
     <div className="max-w-screen-xl mx-auto px-6 py-8">
+      {/* Mobile filter drawer overlay */}
+      {filtersOpen && (
+        <div className="fixed inset-0 z-40 flex md:hidden">
+          <div className="absolute inset-0 bg-black/40" onClick={() => setFiltersOpen(false)} />
+          <div className="relative z-50 w-72 bg-white h-full overflow-y-auto p-4 shadow-xl">
+            <div className="flex items-center justify-between mb-3">
+              <span className="font-semibold text-stone-900 text-sm">Filters</span>
+              <button onClick={() => setFiltersOpen(false)} className="text-stone-400 hover:text-stone-700 transition-colors">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <TileFilters filters={filters} data={filterData} onChange={(f) => { setFilters(f); }} />
+          </div>
+        </div>
+      )}
+
       <div className="flex items-start gap-8">
-        <TileFilters filters={filters} data={filterData} onChange={setFilters} />
+        <div className="hidden md:block">
+          <TileFilters filters={filters} data={filterData} onChange={setFilters} />
+        </div>
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-6">
@@ -71,6 +92,16 @@ export default function GalleryPage() {
               </p>
             </div>
             <div className="flex items-center gap-3">
+              {/* Mobile filter toggle */}
+              <button
+                onClick={() => setFiltersOpen(true)}
+                className="md:hidden flex items-center gap-1.5 px-3 py-2 border border-stone-200 rounded-lg text-sm text-stone-600 hover:border-stone-400 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 4h18M7 8h10M11 12h4" />
+                </svg>
+                Filters
+              </button>
               {selected.size > 0 && (
                 <button onClick={() => setSelected(new Set())}
                   className="text-sm text-stone-400 hover:text-stone-700 transition-colors">

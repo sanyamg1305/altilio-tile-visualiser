@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { FilterOption } from "@/lib/types";
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -93,8 +94,20 @@ export default function AdminFiltersPage() {
 
   const isColor = (cat: string) => cat === "color";
 
+  const BackLink = () => (
+    <div className="mb-6">
+      <Link href="/admin" className="text-sm text-stone-400 hover:text-stone-700 flex items-center gap-1 w-fit">
+        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Tile Management
+      </Link>
+    </div>
+  );
+
   if (loading) return (
     <div className="max-w-screen-xl mx-auto px-6 py-8">
+      <BackLink />
       <div className="animate-pulse space-y-4">
         {Array.from({ length: 4 }).map((_, i) => <div key={i} className="h-32 bg-stone-100 rounded-xl" />)}
       </div>
@@ -185,6 +198,7 @@ export default function AdminFiltersPage() {
 
   return (
     <div className="max-w-screen-xl mx-auto px-6 py-8">
+      <BackLink />
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-2xl font-semibold text-stone-900">Filter Options</h1>

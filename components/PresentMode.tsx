@@ -59,6 +59,7 @@ export default function PresentMode({ tiles, startIndex = 0, onClose }: Props) {
         <button
           onClick={prev}
           className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+          title="Previous (←)"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -67,11 +68,34 @@ export default function PresentMode({ tiles, startIndex = 0, onClose }: Props) {
         <button
           onClick={next}
           className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+          title="Next (→)"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
+
+        {/* Floating controls shown when info panel is hidden */}
+        {!showInfo && (
+          <div className="absolute top-4 right-4 flex gap-2">
+            <button
+              onClick={() => setShowInfo(true)}
+              className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs transition-colors"
+              title="Show info (I)"
+            >
+              Show info
+            </button>
+            <button
+              onClick={onClose}
+              className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+              title="Close (ESC)"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
 
       <div
@@ -145,17 +169,25 @@ export default function PresentMode({ tiles, startIndex = 0, onClose }: Props) {
         </div>
 
         <div className="p-4 border-t border-stone-800">
-          <div className="flex gap-1.5 justify-center">
-            {tiles.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`w-1.5 h-1.5 rounded-full transition-all ${
-                  i === current ? "bg-amber-400 w-4" : "bg-stone-600 hover:bg-stone-400"
-                }`}
-              />
-            ))}
-          </div>
+          {tiles.length <= 20 ? (
+            <div className="flex gap-1.5 justify-center flex-wrap">
+              {tiles.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === current ? "bg-amber-400 w-4" : "bg-stone-600 hover:bg-stone-400 w-1.5"
+                  }`}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="flex items-center justify-center gap-2">
+              <button onClick={prev} className="text-stone-400 hover:text-white transition-colors px-2 py-1 text-xs">‹ Prev</button>
+              <span className="text-stone-400 text-xs tabular-nums">{current + 1} / {tiles.length}</span>
+              <button onClick={next} className="text-stone-400 hover:text-white transition-colors px-2 py-1 text-xs">Next ›</button>
+            </div>
+          )}
           <p className="text-center text-stone-600 text-xs mt-3">← → to navigate · ESC to exit · I to toggle info</p>
         </div>
       </div>
