@@ -30,7 +30,7 @@ export default function PresentMode({ tiles, startIndex = 0, onClose }: Props) {
   const tile = tiles[current];
   if (!tile) return null;
 
-  const useCases = tile.use_cases ? tile.use_cases.split(",").map((s) => s.trim()) : [];
+  const useCases = tile.use_cases ? tile.use_cases.split(",").map((s) => s.trim()).filter(Boolean) : [];
 
   return (
     <div className="fixed inset-0 z-[100] bg-black flex">
@@ -140,20 +140,23 @@ export default function PresentMode({ tiles, startIndex = 0, onClose }: Props) {
 
           <div className="space-y-3">
             {tile.collection && (
-              <Detail label="Collection" value={tile.collection} />
+              <Detail label="Collection" value={toLabel(tile.collection)} />
             )}
             {tile.brand && <Detail label="Brand" value={tile.brand} />}
-            {tile.size && <Detail label="Size" value={tile.size} />}
-            {tile.placement && <Detail label="Placement" value={tile.placement} />}
-            {tile.pattern && <Detail label="Pattern" value={tile.pattern} />}
-            {tile.finish && <Detail label="Finish" value={tile.finish} />}
+            {tile.size && <Detail label="Size" value={`${tile.size} mm`} />}
+            {tile.placement && (
+              <Detail label="Placement" value={PLACEMENT_LABELS[tile.placement] ?? toLabel(tile.placement)} />
+            )}
+            {tile.pattern && <Detail label="Pattern" value={toLabel(tile.pattern)} />}
+            {tile.finish && <Detail label="Finish" value={toLabel(tile.finish)} />}
+            {tile.color && <Detail label="Color" value={toLabel(tile.color)} />}
             {useCases.length > 0 && (
               <div>
                 <p className="text-stone-500 text-xs mb-1.5">Use Cases</p>
                 <div className="flex flex-wrap gap-1.5">
                   {useCases.map((uc) => (
                     <span key={uc} className="text-xs bg-stone-800 text-stone-300 px-2.5 py-0.5 rounded-full">
-                      {uc}
+                      {toLabel(uc)}
                     </span>
                   ))}
                 </div>
@@ -193,6 +196,19 @@ export default function PresentMode({ tiles, startIndex = 0, onClose }: Props) {
       </div>
     </div>
   );
+}
+
+const PLACEMENT_LABELS: Record<string, string> = {
+  floor: "Floor",
+  wall: "Wall",
+  both: "Floor & Wall",
+  outdoor: "Outdoor",
+};
+
+function toLabel(slug: string): string {
+  return slug
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function Detail({ label, value }: { label: string; value: string }) {

@@ -69,7 +69,7 @@ const tiles = [
     use_cases: "bathroom, living_room, lobby",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/flame.jpg",
+    image_path: null,
     description: "Dramatic white marble with bold gold and rust veining reminiscent of Calacatta Oro. A statement tile for luxury interiors.",
   },
   {
@@ -101,7 +101,7 @@ const tiles = [
     use_cases: "bedroom, bathroom, living_room",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/melody-sand.jpg",
+    image_path: null,
     description: "Soft cream-beige marble with delicate veining for a serene, spa-like atmosphere. Ideal for bedrooms and luxury bathrooms.",
   },
   {
@@ -117,7 +117,7 @@ const tiles = [
     use_cases: "living_room, bathroom, commercial",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/melody-gris.jpg",
+    image_path: null,
     description: "Cool grey marble with flowing white veins. Sophisticated and versatile for contemporary residential and commercial spaces.",
   },
   {
@@ -133,7 +133,7 @@ const tiles = [
     use_cases: "bathroom, living_room, bedroom",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/melody-mint.jpg",
+    image_path: null,
     description: "White marble with subtle cool-mint undertones and fine diagonal veining. A refined choice for bathrooms and feature walls.",
   },
   {
@@ -182,7 +182,7 @@ const tiles = [
     use_cases: "living_room, bedroom, commercial",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/morning-glory.jpg",
+    image_path: null,
     description: "Soft cream-ivory stone look with barely-there cloud texture. A clean, versatile backdrop that complements any interior style.",
   },
   {
@@ -198,7 +198,7 @@ const tiles = [
     use_cases: "bathroom, commercial, living_room",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/midnight-black.jpg",
+    image_path: null,
     description: "Deep charcoal-black fullbody tile with a matte finish. Striking in minimalist and dramatic interiors; hides wear exceptionally well.",
   },
   {
@@ -214,7 +214,7 @@ const tiles = [
     use_cases: "living_room, bedroom, commercial",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/dynamic-sand.jpg",
+    image_path: null,
     description: "Warm sandy-beige with subtle linear veining. Brings a natural, earthy energy to open-plan living areas and hallways.",
   },
   {
@@ -230,7 +230,7 @@ const tiles = [
     use_cases: "bedroom, bathroom",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/luna-franch.jpg",
+    image_path: null,
     description: "Delicate blush-rose stone look with a soft matte surface. Creates a warm, feminine atmosphere in bedrooms and en-suite bathrooms.",
   },
   {
@@ -294,7 +294,7 @@ const tiles = [
     use_cases: "living_room, outdoor, commercial",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/rock-gris.jpg",
+    image_path: null,
     description: "Cool grey stone with a naturally worn surface texture. Versatile for both indoor and outdoor applications where strength matters.",
   },
   {
@@ -310,7 +310,7 @@ const tiles = [
     use_cases: "living_room, commercial, outdoor",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/grafito.jpg",
+    image_path: null,
     description: "Warm taupe-beige stone with a finely textured surface. A balanced, neutral tile that adapts easily to any colour scheme.",
   },
   {
@@ -342,7 +342,7 @@ const tiles = [
     use_cases: "outdoor, commercial, living_room",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/bella-sand.jpg",
+    image_path: null,
     description: "Rustic terracotta-and-sand stone with a worn, antiqued finish. Ideal for courtyards, restaurants and boutique retail.",
   },
   {
@@ -374,7 +374,7 @@ const tiles = [
     use_cases: "commercial, living_room, bathroom",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/bella-grigio.jpg",
+    image_path: null,
     description: "Textured grey with a lightly embossed mosaic-micro pattern. Adds tactile depth while maintaining the clean look of concrete.",
   },
   {
@@ -390,7 +390,7 @@ const tiles = [
     use_cases: "outdoor, commercial, living_room",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/grani-sand.jpg",
+    image_path: null,
     description: "Speckled granite-like surface in warm sand tones. Fullbody construction ensures consistent look even at cut edges.",
   },
   {
@@ -422,7 +422,7 @@ const tiles = [
     use_cases: "living_room, lobby, outdoor",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/corten-stone.jpg",
+    image_path: null,
     description: "Inspired by weathered Corten steel — a diagonal split of warm rusty-orange and cool grey. A bold, artistic statement surface.",
   },
   // ── Travertino Series ───────────────────────────────────────────────────────
@@ -471,7 +471,7 @@ const tiles = [
     use_cases: "living_room, commercial, lobby",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/travertino-mint-dark.jpg",
+    image_path: null,
     description: "Rich warm-tan travertine with pronounced linear grain and dark accents. Creates depth and drama in large open spaces.",
   },
   {
@@ -487,7 +487,7 @@ const tiles = [
     use_cases: "bedroom, living_room, lobby",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/travertino-sand-light.jpg",
+    image_path: null,
     description: "Pale cream travertine with fine wood-grain striations. Soft and serene — ideal for bedrooms, spa bathrooms and boutique hotel rooms.",
   },
   {
@@ -503,7 +503,7 @@ const tiles = [
     use_cases: "living_room, commercial, lobby",
     collection: "syncstone_platinum",
     brand: "Mozart",
-    image_path: "/tiles/travertino-sand-dark.jpg",
+    image_path: null,
     description: "Warm walnut-toned travertine with deep horizontal grain. A grounding, sophisticated choice for feature floors and wall panels.",
   },
 ];
