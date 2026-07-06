@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import db, { FilterOption } from "@/lib/db";
+import { getAllFilterOptions } from "@/lib/catalog";
 
 export async function GET() {
-  const options = db.prepare(
-    "SELECT * FROM filter_options ORDER BY category, sort_order, label"
-  ).all() as FilterOption[];
+  const options = getAllFilterOptions();
   return NextResponse.json(options);
 }
 

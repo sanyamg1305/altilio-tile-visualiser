@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import db, { TileInput } from "@/lib/db";
+import { getTileById } from "@/lib/catalog";
 
 export async function GET(_: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const tile = db.prepare("SELECT * FROM tiles WHERE id = ?").get(Number(id));
+  const tile = getTileById(Number(id));
   if (!tile) return NextResponse.json({ error: "Not found" }, { status: 404 });
   return NextResponse.json(tile);
 }

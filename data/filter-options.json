@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "category": "pattern",
+    "value": "marble",
+    "label": "Marble",
+    "metadata": null,
+    "sort_order": 0
+  },
+  {
+    "id": 2,
+    "category": "pattern",
+    "value": "wood",
+    "label": "Wood",
+    "metadata": null,
+    "sort_order": 1
+  },
+  {
+    "id": 3,
+    "category": "pattern",
+    "value": "concrete",
+    "label": "Concrete",
+    "metadata": null,
+    "sort_order": 2
+  },
+  {
+    "id": 4,
+    "category": "pattern",
+    "value": "geometric",
+    "label": "Geometric",
+    "metadata": null,
+    "sort_order": 3
+  },
+  {
+    "id": 5,
+    "category": "pattern",
+    "value": "plain",
+    "label": "Plain",
+    "metadata": null,
+    "sort_order": 4
+  },
+  {
+    "id": 6,
+    "category": "pattern",
+    "value": "mosaic",
+    "label": "Mosaic",
+    "metadata": null,
+    "sort_order": 5
+  },
+  {
+    "id": 7,
+    "category": "pattern",
+    "value": "stone",
+    "label": "Stone",
+    "metadata": null,
+    "sort_order": 6
+  },
+  {
+    "id": 8,
+    "category": "pattern",
+    "value": "abstract",
+    "label": "Abstract",
+    "metadata": null,
+    "sort_order": 7
+  },
+  {
+    "id": 9,
+    "category": "pattern",
+    "value": "terrazzo",
+    "label": "Terrazzo",
+    "metadata": null,
+    "sort_order": 8
+  },
+  {
+    "id": 10,
+    "category": "pattern",
+    "value": "zellige",
+    "label": "Zellige",
+    "metadata": null,
+    "sort_order": 9
+  },
+  {
+    "id": 11,
+    "category": "finish",
+    "value": "matte",
+    "label": "Matte",
+    "metadata": null,
+    "sort_order": 0
+  },
+  {
+    "id": 12,
+    "category": "finish",
+    "value": "glossy",
+    "label": "Glossy",
+    "metadata": null,
+    "sort_order": 1
+  },
+  {
+    "id": 13,
+    "category": "finish",
+    "value": "satin",
+    "label": "Satin",
+    "metadata": null,
+    "sort_order": 2
+  },
+  {
+    "id": 14,
+    "category": "finish",
+    "value": "polished",
+    "label": "Polished",
+    "metadata": null,
+    "sort_order": 3
+  },
+  {
+    "id": 15,
+    "category": "finish",
+    "value": "textured",
+    "label": "Textured",
+    "metadata": null,
+    "sort_order": 4
+  },
+  {
+    "id": 16,
+    "category": "finish",
+    "value": "rustic",
+    "label": "Rustic",
+    "metadata": null,
+    "sort_order": 5
+  },
+  {
+    "id": 17,
+    "category": "finish",
+    "value": "lappato",
+    "label": "Lappato",
+    "metadata": null,
+    "sort_order": 6
+  },
+  {
+    "id": 18,
+    "category": "finish",
+    "value": "sugar",
+    "label": "Sugar",
+    "metadata": null,
+    "sort_order": 7
+  },
+  {
+    "id": 19,
+    "category": "placement",
+    "value": "floor",
+    "label": "Floor",
+    "metadata": null,
+    "sort_order": 0
+  },
+  {
+    "id": 20,
+    "category": "placement",
+    "value": "wall",
+    "label": "Wall",
+    "metadata": null,
+    "sort_order": 1
+  },
+  {
+    "id": 21,
+    "category": "placement",
+    "value": "both",
+    "label": "Floor & Wall",
+    "metadata": null,
+    "sort_order": 2
+  },
+  {
+    "id": 22,
+    "category": "placement",
+    "value": "outdoor",
+    "label": "Outdoor",
+    "metadata": null,
+    "sort_order": 3
+  },
+  {
+    "id": 23,
+    "category": "use_case",
+    "value": "bathroom",
+    "label": "Bathroom",
+    "metadata": null,
+    "sort_order": 0
+  },
+  {
+    "id": 24,
+    "category": "use_case",
+    "value": "kitchen",
+    "label": "Kitchen",
+    "metadata": null,
+    "sort_order": 1
+  },
+  {
+    "id": 25,
+    "category": "use_case",
+    "value": "living_room",
+    "label": "Living Room",
+    "metadata": null,
+    "sort_order": 2
+  },
+  {
+    "id": 26,
+    "category": "use_case",
+    "value": "bedroom",
+    "label": "Bedroom",
+    "metadata": null,
+    "sort_order": 3
+  },
+  {
+    "id": 27,
+    "category": "use_case",
+    "value": "outdoor",
+    "label": "Outdoor",
+    "metadata": null,
+    "sort_order": 4
+  },
+  {
+    "id": 28,
+    "category": "use_case",
+    "value": "commercial",
+    "label": "Commercial",
+    "metadata": null,
+    "sort_order": 5
+  },
+  {
+    "id": 29,
+    "category": "use_case",
+    "value": "balcony",
+    "label": "Balcony",
+    "metadata": null,
+    "sort_order": 6
+  },
+  {
+    "id": 30,
+    "category": "use_case",
+    "value": "lobby",
+    "label": "Lobby",
+    "metadata": null,
+    "sort_order": 7
+  },
+  {
+    "id": 31,
+    "category": "color",
+    "value": "white",
+    "label": "White",
+    "metadata": "{\"hex\":\"#F5F5F5\"}",
+    "sort_order": 0
+  },
+  {
+    "id": 32,
+    "category": "color",
+    "value": "beige",
+    "label": "Beige",
+    "metadata": "{\"hex\":\"#E8DCC8\"}",
+    "sort_order": 1
+  },
+  {
+    "id": 33,
+    "category": "color",
+    "value": "cream",
+    "label": "Cream",
+    "metadata": "{\"hex\":\"#FFFDD0\"}",
+    "sort_order": 2
+  },
+  {
+    "id": 34,
+    "category": "color",
+    "value": "grey",
+    "label": "Grey",
+    "metadata": "{\"hex\":\"#9E9E9E\"}",
+    "sort_order": 3
+  },
+  {
+    "id": 35,
+    "category": "color",
+    "value": "charcoal",
+    "label": "Charcoal",
+    "metadata": "{\"hex\":\"#37474F\"}",
+    "sort_order": 4
+  },
+  {
+    "id": 36,
+    "category": "color",
+    "value": "black",
+    "label": "Black",
+    "metadata": "{\"hex\":\"#212121\"}",
+    "sort_order": 5
+  },
+  {
+    "id": 37,
+    "category": "color",
+    "value": "brown",
+    "label": "Brown",
+    "metadata": "{\"hex\":\"#795548\"}",
+    "sort_order": 6
+  },
+  {
+    "id": 38,
+    "category": "color",
+    "value": "terracotta",
+    "label": "Terracotta",
+    "metadata": "{\"hex\":\"#C1440E\"}",
+    "sort_order": 7
+  },
+  {
+    "id": 39,
+    "category": "color",
+    "value": "blue",
+    "label": "Blue",
+    "metadata": "{\"hex\":\"#1565C0\"}",
+    "sort_order": 8
+  },
+  {
+    "id": 40,
+    "category": "color",
+    "value": "green",
+    "label": "Green",
+    "metadata": "{\"hex\":\"#2E7D32\"}",
+    "sort_order": 9
+  },
+  {
+    "id": 41,
+    "category": "color",
+    "value": "gold",
+    "label": "Gold",
+    "metadata": "{\"hex\":\"#F9A825\"}",
+    "sort_order": 10
+  },
+  {
+    "id": 42,
+    "category": "size",
+    "value": "300×300",
+    "label": "300×300",
+    "metadata": null,
+    "sort_order": 0
+  },
+  {
+    "id": 43,
+    "category": "size",
+    "value": "600×300",
+    "label": "600×300",
+    "metadata": null,
+    "sort_order": 1
+  },
+  {
+    "id": 44,
+    "category": "size",
+    "value": "600×600",
+    "label": "600×600",
+    "metadata": null,
+    "sort_order": 2
+  },
+  {
+    "id": 45,
+    "category": "size",
+    "value": "800×800",
+    "label": "800×800",
+    "metadata": null,
+    "sort_order": 3
+  },
+  {
+    "id": 46,
+    "category": "size",
+    "value": "1200×600",
+    "label": "1200×600",
+    "metadata": null,
+    "sort_order": 4
+  },
+  {
+    "id": 47,
+    "category": "size",
+    "value": "1200×1200",
+    "label": "1200×1200",
+    "metadata": null,
+    "sort_order": 5
+  },
+  {
+    "id": 48,
+    "category": "size",
+    "value": "200×1200",
+    "label": "200×1200",
+    "metadata": null,
+    "sort_order": 6
+  },
+  {
+    "id": 49,
+    "category": "size",
+    "value": "400×800",
+    "label": "400×800",
+    "metadata": null,
+    "sort_order": 7
+  },
+  {
+    "id": 50,
+    "category": "collection",
+    "value": "luxury_marble",
+    "label": "Luxury Marble",
+    "metadata": null,
+    "sort_order": 0
+  },
+  {
+    "id": 51,
+    "category": "collection",
+    "value": "heritage_stone",
+    "label": "Heritage Stone",
+    "metadata": null,
+    "sort_order": 1
+  },
+  {
+    "id": 52,
+    "category": "collection",
+    "value": "urban_concrete",
+    "label": "Urban Concrete",
+    "metadata": null,
+    "sort_order": 2
+  },
+  {
+    "id": 53,
+    "category": "collection",
+    "value": "nature_wood",
+    "label": "Nature Wood",
+    "metadata": null,
+    "sort_order": 3
+  },
+  {
+    "id": 54,
+    "category": "collection",
+    "value": "classic_white",
+    "label": "Classic White",
+    "metadata": null,
+    "sort_order": 4
+  },
+  {
+    "id": 55,
+    "category": "collection",
+    "value": "designer_series",
+    "label": "Designer Series",
+    "metadata": null,
+    "sort_order": 5
+  },
+  {
+    "id": 56,
+    "category": "size",
+    "value": "600×1200",
+    "label": "600×1200 mm",
+    "metadata": null,
+    "sort_order": 10
+  },
+  {
+    "id": 57,
+    "category": "collection",
+    "value": "syncstone_platinum",
+    "label": "SyncStone Platinum",
+    "metadata": null,
+    "sort_order": 10
+  },
+  {
+    "id": 58,
+    "category": "collection",
+    "value": "syncstone_gold",
+    "label": "SyncStone Gold",
+    "metadata": null,
+    "sort_order": 11
+  },
+  {
+    "id": 59,
+    "category": "finish",
+    "value": "plume_matt",
+    "label": "Plume Matt",
+    "metadata": null,
+    "sort_order": 10
+  },
+  {
+    "id": 60,
+    "category": "finish",
+    "value": "punto",
+    "label": "Punto",
+    "metadata": null,
+    "sort_order": 11
+  },
+  {
+    "id": 61,
+    "category": "color",
+    "value": "pink",
+    "label": "Pink",
+    "metadata": "{\"hex\":\"#F4A7B9\"}",
+    "sort_order": 12
+  },
+  {
+    "id": 62,
+    "category": "color",
+    "value": "amber",
+    "label": "Amber",
+    "metadata": "{\"hex\":\"#FFBF00\"}",
+    "sort_order": 13
+  },
+  {
+    "id": 63,
+    "category": "color",
+    "value": "blue_grey",
+    "label": "Blue Grey",
+    "metadata": "{\"hex\":\"#78909C\"}",
+    "sort_order": 14
+  },
+  {
+    "id": 67,
+    "category": "collection",
+    "value": "frame_collection",
+    "label": "Frame Collection",
+    "metadata": null,
+    "sort_order": 12
+  },
+  {
+    "id": 68,
+    "category": "collection",
+    "value": "wainscot_series",
+    "label": "Wainscot Series",
+    "metadata": null,
+    "sort_order": 13
+  },
+  {
+    "id": 71,
+    "category": "finish",
+    "value": "matt",
+    "label": "Matt",
+    "metadata": null,
+    "sort_order": 12
+  },
+  {
+    "id": 75,
+    "category": "color",
+    "value": "aqua",
+    "label": "Aqua",
+    "metadata": "{\"hex\":\"#B2DFD8\"}",
+    "sort_order": 15
+  },
+  {
+    "id": 76,
+    "category": "color",
+    "value": "sage",
+    "label": "Sage",
+    "metadata": "{\"hex\":\"#9CAF88\"}",
+    "sort_order": 16
+  },
+  {
+    "id": 78,
+    "category": "color",
+    "value": "navy",
+    "label": "Navy",
+    "metadata": "{\"hex\":\"#4A5C7A\"}",
+    "sort_order": 18
+  },
+  {
+    "id": 79,
+    "category": "color",
+    "value": "taupe",
+    "label": "Taupe",
+    "metadata": "{\"hex\":\"#9E8E7E\"}",
+    "sort_order": 19
+  },
+  {
+    "id": 80,
+    "category": "color",
+    "value": "salmon",
+    "label": "Salmon",
+    "metadata": "{\"hex\":\"#E8846A\"}",
+    "sort_order": 20
+  },
+  {
+    "id": 81,
+    "category": "color",
+    "value": "dark_grey",
+    "label": "Dark Grey",
+    "metadata": "{\"hex\":\"#5A5A5A\"}",
+    "sort_order": 21
+  },
+  {
+    "id": 82,
+    "category": "pattern",
+    "value": "frame",
+    "label": "Frame",
+    "metadata": null,
+    "sort_order": 10
+  },
+  {
+    "id": 83,
+    "category": "pattern",
+    "value": "wainscot",
+    "label": "Wainscot",
+    "metadata": null,
+    "sort_order": 11
+  },
+  {
+    "id": 84,
+    "category": "pattern",
+    "value": "floral",
+    "label": "Floral",
+    "metadata": null,
+    "sort_order": 12
+  }
+]

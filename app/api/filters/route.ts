@@ -1,14 +1,15 @@
 import { NextResponse } from "next/server";
-import db, { FilterOption } from "@/lib/db";
+import { FilterOption } from "@/lib/types";
+import { getAllFilterOptions, getAllTiles } from "@/lib/catalog";
 
 export async function GET() {
-  const options = db.prepare(
-    "SELECT * FROM filter_options ORDER BY category, sort_order, label"
-  ).all() as FilterOption[];
+  const options = getAllFilterOptions();
+  const tiles = getAllTiles();
 
-  const priceRange = db.prepare(
-    "SELECT MIN(price) as min, MAX(price) as max FROM tiles WHERE price IS NOT NULL"
-  ).get() as { min: number | null; max: number | null };
+  const prices = tiles.map((t) => t.price).filter((p): p is number => p != null);
+  const priceRange = prices.length
+    ? { min: Math.min(...prices), max: Math.max(...prices) }
+    : { min: null, max: null };
 
   const grouped: Record<string, FilterOption[]> = {};
   for (const opt of options) {

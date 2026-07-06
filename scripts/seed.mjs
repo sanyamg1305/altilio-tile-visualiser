@@ -931,5 +931,14 @@ const insertAll = db.transaction(() => {
 });
 
 insertAll();
-console.log(`✓ Seeded ${tiles.length} Mozart SyncStone tiles.`);
+console.log(`✓ Seeded ${tiles.length} tiles.`);
+
+// Export to JSON for Vercel (no SQLite native module needed at runtime)
+import { writeFileSync } from "fs";
+const allTiles = db.prepare("SELECT * FROM tiles").all();
+const allFilters = db.prepare("SELECT * FROM filter_options").all();
+writeFileSync(join(__dirname, "../data/tiles.json"), JSON.stringify(allTiles, null, 2));
+writeFileSync(join(__dirname, "../data/filter-options.json"), JSON.stringify(allFilters, null, 2));
+console.log(`✓ Exported tiles.json (${allTiles.length}) and filter-options.json (${allFilters.length}).`);
+
 db.close();
