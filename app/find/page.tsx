@@ -62,6 +62,17 @@ const STEPS: Step[] = [
     ],
   },
   {
+    key: "size",
+    title: "What tile size?",
+    subtitle: "Larger formats make spaces feel bigger; smaller tiles add texture.",
+    options: [
+      { value: "600×1200", label: "600×1200 mm", desc: "Large format — modern & seamless" },
+      { value: "600×600", label: "600×600 mm", desc: "Classic square — versatile" },
+      { value: "300×600", label: "300×600 mm", desc: "Subway-style — timeless" },
+      { value: "300×300", label: "300×300 mm", desc: "Small format — detailed spaces" },
+    ],
+  },
+  {
     key: "color",
     title: "What colour palette?",
     subtitle: "Pick the tones that fit your space.",
