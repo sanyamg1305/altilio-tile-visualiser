@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import TileCard from "@/components/TileCard";
 import TileFilters, { ActiveFilters, emptyFilters } from "@/components/TileFilters";
 import PresentMode from "@/components/PresentMode";
@@ -10,10 +11,36 @@ type FilterData = {
   priceRange: { min: number | null; max: number | null };
 };
 
-export default function GalleryPage() {
+function filtersFromParams(params: URLSearchParams): ActiveFilters {
+  const multi = (key: string) => params.getAll(key).flatMap((v) => v.split(",")).filter(Boolean);
+  return {
+    ...emptyFilters,
+    placement: multi("placement"),
+    pattern: multi("pattern"),
+    finish: multi("finish"),
+    color: multi("color"),
+    size: multi("size"),
+    collection: multi("collection"),
+    brand: multi("brand"),
+    use_case: multi("use_case"),
+    price_min: params.get("price_min") ? Number(params.get("price_min")) : null,
+    price_max: params.get("price_max") ? Number(params.get("price_max")) : null,
+  };
+}
+
+export default function GalleryPageWrapper() {
+  return (
+    <Suspense>
+      <GalleryPage />
+    </Suspense>
+  );
+}
+
+function GalleryPage() {
+  const searchParams = useSearchParams();
   const [tiles, setTiles] = useState<Tile[]>([]);
   const [filterData, setFilterData] = useState<FilterData>({ options: {}, priceRange: { min: null, max: null } });
-  const [filters, setFilters] = useState<ActiveFilters>(emptyFilters);
+  const [filters, setFilters] = useState<ActiveFilters>(() => filtersFromParams(searchParams));
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [presenting, setPresenting] = useState(false);
   const [presentStart, setPresentStart] = useState(0);

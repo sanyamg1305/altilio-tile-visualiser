@@ -49,12 +49,17 @@ export default function LandingPage() {
           <span className="font-semibold text-lg tracking-tight text-white">Altilio</span>
           <span className="text-xs text-stone-500 font-medium uppercase tracking-widest mt-0.5">Tiles</span>
         </div>
-        <Link
-          href="/gallery"
-          className="px-5 py-2 rounded-full bg-white text-stone-900 text-sm font-medium hover:bg-stone-100 transition-colors"
-        >
-          Open Catalog →
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/gallery" className="text-stone-400 hover:text-white text-sm transition-colors hidden sm:block">
+            Browse all
+          </Link>
+          <Link
+            href="/find"
+            className="px-5 py-2 rounded-full bg-white text-stone-900 text-sm font-medium hover:bg-stone-100 transition-colors"
+          >
+            Find My Tile →
+          </Link>
+        </div>
       </nav>
 
       {/* Hero */}
@@ -82,15 +87,23 @@ export default function LandingPage() {
             Browse 54 tiles across SyncStone, Frame, and Wainscot collections.
             Filter, explore room scenes, and present to clients — all in one place.
           </p>
-          <Link
-            href="/gallery"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-stone-900 rounded-full font-medium text-base hover:bg-stone-100 transition-colors"
-          >
-            Browse the Catalog
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center gap-3 justify-center">
+            <Link
+              href="/find"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-stone-900 rounded-full font-medium text-base hover:bg-stone-100 transition-colors"
+            >
+              Find My Tile
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-2 px-6 py-4 text-stone-400 hover:text-white text-sm transition-colors"
+            >
+              Browse all tiles →
+            </Link>
+          </div>
         </div>
       </section>
 
