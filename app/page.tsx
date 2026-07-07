@@ -1,160 +1,117 @@
-"use client";
-import { useState, useEffect, useCallback } from "react";
-import TileCard from "@/components/TileCard";
-import TileFilters, { ActiveFilters, emptyFilters } from "@/components/TileFilters";
-import PresentMode from "@/components/PresentMode";
-import { Tile, FilterOption } from "@/lib/types";
+import Link from "next/link";
+import Image from "next/image";
 
-type FilterData = {
-  options: Record<string, FilterOption[]>;
-  priceRange: { min: number | null; max: number | null };
-};
+const HERO_TILES = [
+  "/tiles/frame-cement.jpg",
+  "/tiles/wainscot-leaf.jpg",
+  "/tiles/frame-windsor.jpg",
+  "/tiles/wainscot-carbon.jpg",
+  "/tiles/frame-kota.jpg",
+  "/tiles/frame-denim-cream.jpg",
+];
 
-export default function GalleryPage() {
-  const [tiles, setTiles] = useState<Tile[]>([]);
-  const [filterData, setFilterData] = useState<FilterData>({ options: {}, priceRange: { min: null, max: null } });
-  const [filters, setFilters] = useState<ActiveFilters>(emptyFilters);
-  const [selected, setSelected] = useState<Set<number>>(new Set());
-  const [presenting, setPresenting] = useState(false);
-  const [presentStart, setPresentStart] = useState(0);
-  const [loading, setLoading] = useState(true);
-  const [filtersOpen, setFiltersOpen] = useState(false);
+const FEATURES = [
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3 3h18" />
+      </svg>
+    ),
+    title: "54 Curated Tiles",
+    desc: "Three collections — SyncStone, Frame, and Wainscot — spanning every style from minimalist to classical.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+      </svg>
+    ),
+    title: "Present Mode",
+    desc: "Full-screen slideshow with tile details. Share collections with clients in a clean, distraction-free view.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
+      </svg>
+    ),
+    title: "Smart Filters",
+    desc: "Filter by collection, pattern, finish, color, placement, and price range to find exactly the right tile.",
+  },
+];
 
-  const fetchTiles = useCallback(async () => {
-    const params = new URLSearchParams();
-    const arr = (key: string, vals: string[]) => vals.forEach((v) => params.append(key, v));
-    arr("placement", filters.placement);
-    arr("pattern", filters.pattern);
-    arr("finish", filters.finish);
-    arr("color", filters.color);
-    arr("size", filters.size);
-    arr("collection", filters.collection);
-    arr("brand", filters.brand);
-    arr("use_case", filters.use_case);
-    if (filters.price_min != null) params.set("price_min", String(filters.price_min));
-    if (filters.price_max != null) params.set("price_max", String(filters.price_max));
-    const res = await fetch(`/api/tiles?${params}`);
-    setTiles(await res.json());
-    setLoading(false);
-  }, [filters]);
-
-  useEffect(() => { fetchTiles(); }, [fetchTiles]);
-  useEffect(() => {
-    fetch("/api/filters").then((r) => r.json()).then(setFilterData);
-  }, []);
-
-  const toggleSelect = (id: number) => {
-    setSelected((prev) => { const s = new Set(prev); s.has(id) ? s.delete(id) : s.add(id); return s; });
-  };
-
-  const openPresent = (startId?: number) => {
-    const pool = selected.size > 0 ? tiles.filter((t) => selected.has(t.id)) : tiles;
-    if (!pool.length) return;
-    const idx = startId != null ? Math.max(0, pool.findIndex((t) => t.id === startId)) : 0;
-    setPresentStart(idx);
-    setPresenting(true);
-  };
-
-  const presentTiles = selected.size > 0 ? tiles.filter((t) => selected.has(t.id)) : tiles;
-
+export default function LandingPage() {
   return (
-    <div className="max-w-screen-xl mx-auto px-6 py-8">
-      {/* Mobile filter drawer overlay */}
-      {filtersOpen && (
-        <div className="fixed inset-0 z-40 flex md:hidden">
-          <div className="absolute inset-0 bg-black/40" onClick={() => setFiltersOpen(false)} />
-          <div className="relative z-50 w-72 bg-white h-full overflow-y-auto p-4 shadow-xl">
-            <div className="flex items-center justify-between mb-3">
-              <span className="font-semibold text-stone-900 text-sm">Filters</span>
-              <button onClick={() => setFiltersOpen(false)} className="text-stone-400 hover:text-stone-700 transition-colors">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+    <div className="min-h-screen bg-stone-950 text-white flex flex-col">
+      {/* Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 h-16">
+        <div className="flex items-center gap-2">
+          <span className="font-semibold text-lg tracking-tight text-white">Altilio</span>
+          <span className="text-xs text-stone-500 font-medium uppercase tracking-widest mt-0.5">Tiles</span>
+        </div>
+        <Link
+          href="/gallery"
+          className="px-5 py-2 rounded-full bg-white text-stone-900 text-sm font-medium hover:bg-stone-100 transition-colors"
+        >
+          Open Catalog →
+        </Link>
+      </nav>
+
+      {/* Hero */}
+      <section className="flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center relative overflow-hidden">
+        {/* Mosaic background */}
+        <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-0.5 opacity-20 pointer-events-none">
+          {HERO_TILES.map((src, i) => (
+            <div key={i} className="relative overflow-hidden">
+              <Image src={src} alt="" fill className="object-cover" sizes="33vw" />
             </div>
-            <TileFilters filters={filters} data={filterData} onChange={(f) => { setFilters(f); }} />
+          ))}
+        </div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/60 via-stone-950/40 to-stone-950/90 pointer-events-none" />
+
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <p className="text-stone-400 text-sm uppercase tracking-[0.2em] font-medium mb-6">
+            Mozart Tiles · Catalog Visualizer
+          </p>
+          <h1 className="text-5xl md:text-6xl font-light tracking-tight text-white mb-6 leading-tight">
+            Find the perfect<br />
+            <span className="font-semibold">tile for every space</span>
+          </h1>
+          <p className="text-stone-400 text-lg mb-10 leading-relaxed">
+            Browse 54 tiles across SyncStone, Frame, and Wainscot collections.
+            Filter, explore room scenes, and present to clients — all in one place.
+          </p>
+          <Link
+            href="/gallery"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-stone-900 rounded-full font-medium text-base hover:bg-stone-100 transition-colors"
+          >
+            Browse the Catalog
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="border-t border-stone-800 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-800">
+        {FEATURES.map((f) => (
+          <div key={f.title} className="px-10 py-10 flex flex-col gap-3">
+            <div className="text-stone-400">{f.icon}</div>
+            <h3 className="text-white font-semibold text-base">{f.title}</h3>
+            <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
           </div>
-        </div>
-      )}
+        ))}
+      </section>
 
-      <div className="flex items-start gap-8">
-        <div className="hidden md:block">
-          <TileFilters filters={filters} data={filterData} onChange={setFilters} />
-        </div>
-
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h1 className="text-2xl font-semibold text-stone-900">Tile Catalog</h1>
-              <p className="text-sm text-stone-400 mt-0.5">
-                {loading ? "Loading…" : `${tiles.length} tile${tiles.length !== 1 ? "s" : ""}`}
-                {selected.size > 0 && ` · ${selected.size} selected`}
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              {/* Mobile filter toggle */}
-              <button
-                onClick={() => setFiltersOpen(true)}
-                className="md:hidden flex items-center gap-1.5 px-3 py-2 border border-stone-200 rounded-lg text-sm text-stone-600 hover:border-stone-400 transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 4h18M7 8h10M11 12h4" />
-                </svg>
-                Filters
-              </button>
-              {selected.size > 0 && (
-                <button onClick={() => setSelected(new Set())}
-                  className="text-sm text-stone-400 hover:text-stone-700 transition-colors">
-                  Clear selection
-                </button>
-              )}
-              <button onClick={() => openPresent()} disabled={tiles.length === 0}
-                className="flex items-center gap-2 px-4 py-2 bg-stone-900 text-white rounded-lg text-sm font-medium hover:bg-stone-700 transition-colors disabled:opacity-40">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.893L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                {selected.size > 0 ? `Present ${selected.size} tiles` : "Present all"}
-              </button>
-            </div>
-          </div>
-
-          {loading ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div key={i} className="rounded-xl overflow-hidden animate-pulse">
-                  <div className="aspect-square bg-stone-200" />
-                  <div className="p-3 bg-white space-y-2">
-                    <div className="h-4 bg-stone-100 rounded w-3/4" />
-                    <div className="h-3 bg-stone-100 rounded w-1/2" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : tiles.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-24 text-stone-400">
-              <svg className="w-12 h-12 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="7" height="7" rx="1" strokeWidth="1" />
-                <rect x="14" y="3" width="7" height="7" rx="1" strokeWidth="1" />
-                <rect x="3" y="14" width="7" height="7" rx="1" strokeWidth="1" />
-                <rect x="14" y="14" width="7" height="7" rx="1" strokeWidth="1" />
-              </svg>
-              <p className="text-sm font-medium">No tiles found</p>
-              <p className="text-xs mt-1">Try adjusting your filters</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {tiles.map((tile) => (
-                <TileCard key={tile.id} tile={tile} selected={selected.has(tile.id)}
-                  onToggleSelect={toggleSelect} onClick={() => openPresent(tile.id)} />
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-
-      {presenting && (
-        <PresentMode tiles={presentTiles} startIndex={presentStart} onClose={() => setPresenting(false)} />
-      )}
+      {/* Footer */}
+      <footer className="border-t border-stone-800 px-8 py-5 flex items-center justify-between">
+        <span className="text-stone-600 text-xs">© 2025 Altilio. Internal tool.</span>
+        <Link href="/gallery" className="text-stone-500 hover:text-white text-xs transition-colors">
+          Open Catalog →
+        </Link>
+      </footer>
     </div>
   );
 }

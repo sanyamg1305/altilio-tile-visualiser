@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV = [
-  { href: "/", label: "Gallery" },
+  { href: "/gallery", label: "Gallery", match: (p: string) => p === "/gallery" },
   { href: "/admin", label: "Tiles", match: (p: string) => p === "/admin" || p.startsWith("/admin/tiles") },
   { href: "/admin/filters", label: "Filters", match: (p: string) => p.startsWith("/admin/filters") },
 ];
