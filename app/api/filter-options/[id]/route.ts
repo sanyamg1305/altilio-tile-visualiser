@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import db from "@/lib/db";
 
 export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { default: db } = await import("@/lib/db");
   const { id } = await params;
   const { label, metadata, sort_order } = await request.json();
   db.prepare(
@@ -12,6 +12,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
 }
 
 export async function DELETE(_: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { default: db } = await import("@/lib/db");
   const { id } = await params;
   db.prepare("DELETE FROM filter_options WHERE id = ?").run(Number(id));
   return NextResponse.json({ success: true });

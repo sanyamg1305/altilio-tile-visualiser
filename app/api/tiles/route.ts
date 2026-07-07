@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import db, { TileInput } from "@/lib/db";
+import type { TileInput } from "@/lib/db";
 import { queryTiles } from "@/lib/catalog";
 
 export async function GET(request: NextRequest) {
@@ -9,6 +9,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const { default: db } = await import("@/lib/db");
   const body: TileInput = await request.json();
   const stmt = db.prepare(`
     INSERT INTO tiles (name, sku, size, placement, pattern, finish, color, price, price_unit, use_cases, collection, brand, image_path, description)

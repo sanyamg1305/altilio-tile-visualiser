@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import db, { TileInput } from "@/lib/db";
+import type { TileInput } from "@/lib/db";
 import { getTileById } from "@/lib/catalog";
 
 export async function GET(_: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -10,6 +10,7 @@ export async function GET(_: NextRequest, { params }: { params: Promise<{ id: st
 }
 
 export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { default: db } = await import("@/lib/db");
   const { id } = await params;
   const body: TileInput = await request.json();
   db.prepare(`
@@ -23,6 +24,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
 }
 
 export async function DELETE(_: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { default: db } = await import("@/lib/db");
   const { id } = await params;
   db.prepare("DELETE FROM tiles WHERE id = ?").run(Number(id));
   return NextResponse.json({ success: true });

@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import db, { FilterOption } from "@/lib/db";
 import { getAllFilterOptions } from "@/lib/catalog";
 
 export async function GET() {
@@ -8,6 +7,7 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+  const { default: db } = await import("@/lib/db");
   const { category, value, label, metadata, sort_order } = await request.json();
   if (!category || !value || !label) {
     return NextResponse.json({ error: "category, value, and label are required" }, { status: 400 });
