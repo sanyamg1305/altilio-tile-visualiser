@@ -54,11 +54,17 @@ export default function QuartzPage() {
   const [sort, setSort] = useState("az");
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<QuartzItem | null>(null);
+  const [allItems, setAllItems] = useState<QuartzItem[]>([]);
   const [likes, setLikes] = useState<Set<number>>(new Set());
   const [showLikedOnly, setShowLikedOnly] = useState(false);
   const [exporting, setExporting] = useState(false);
 
   useEffect(() => { setLikes(getLikes()); }, []);
+
+  // Fetch all items (unfiltered) so the PDF always has the full liked set
+  useEffect(() => {
+    fetch("/api/quartz").then((r) => r.json()).then(setAllItems);
+  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -235,13 +241,13 @@ export default function QuartzPage() {
               <div className="mt-auto pt-4 border-t border-stone-800">
                 <button
                   onClick={handleExportPDF}
-                  disabled={exporting || sorted.length === 0}
+                  disabled={exporting || likes.size === 0}
                   className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm text-stone-400 hover:text-white hover:bg-stone-900 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                   </svg>
-                  {exporting ? "Preparing…" : "Export PDF"}
+                  {exporting ? "Preparing…" : `Export PDF${likes.size > 0 ? ` (${likes.size})` : ""}`}
                 </button>
               </div>
             </div>
@@ -312,9 +318,9 @@ export default function QuartzPage() {
               )}
             </div>
 
-            {/* Print-only grid */}
+            {/* Print-only grid — always shows liked items only */}
             <div className="print-grid hidden flex-1">
-              {sorted.map((q) => (
+              {allItems.filter((q) => likes.has(q.id)).map((q) => (
                 <div key={q.id} className="print-card">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={q.image} alt={q.name} />
