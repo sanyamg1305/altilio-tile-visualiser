@@ -14,6 +14,8 @@ const COLOR_FILTERS = [
   { value: "green",     label: "Green",      hex: "#5A8C6A" },
   { value: "aqua",      label: "Aqua",       hex: "#5AAEAA" },
   { value: "navy",      label: "Blue",       hex: "#3A5C8A" },
+  { value: "pink",      label: "Pink",       hex: "#D4869A" },
+  { value: "red",       label: "Red",        hex: "#A84444" },
 ];
 
 export default function QuartzPage() {
