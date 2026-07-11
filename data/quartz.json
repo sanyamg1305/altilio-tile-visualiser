@@ -1,345 +1,51 @@
 [
-  {
-    "id": 1,
-    "name": "Absolute White",
-    "slug": "absolute-white",
-    "image": "/quartz/absolute-white.png",
-    "color": "white"
-  },
-  {
-    "id": 2,
-    "name": "Amazonite",
-    "slug": "amazonite",
-    "image": "/quartz/amazonite.png",
-    "color": "aqua"
-  },
-  {
-    "id": 3,
-    "name": "Azure",
-    "slug": "azure",
-    "image": "/quartz/azure.png",
-    "color": "grey"
-  },
-  {
-    "id": 4,
-    "name": "Black Velvet",
-    "slug": "black-velvet",
-    "image": "/quartz/black-velvet.png",
-    "color": "dark_grey"
-  },
-  {
-    "id": 5,
-    "name": "Blossom White",
-    "slug": "blossom-white",
-    "image": "/quartz/blossom-white.png",
-    "color": "white"
-  },
-  {
-    "id": 6,
-    "name": "Calcatta Emerald",
-    "slug": "calcatta-emerald",
-    "image": "/quartz/calcatta-emerald.png",
-    "color": "green"
-  },
-  {
-    "id": 7,
-    "name": "Calcatta Ornate",
-    "slug": "calcatta-ornate",
-    "image": "/quartz/calcatta-ornate.png",
-    "color": "white"
-  },
-  {
-    "id": 8,
-    "name": "Calcatta Taj",
-    "slug": "calcatta-taj",
-    "image": "/quartz/calcatta-taj.png",
-    "color": "cream"
-  },
-  {
-    "id": 9,
-    "name": "Cappuccino Cream",
-    "slug": "cappuccino-cream",
-    "image": "/quartz/cappuccino-cream.png",
-    "color": "cream"
-  },
-  {
-    "id": 10,
-    "name": "Castle White",
-    "slug": "castle-white",
-    "image": "/quartz/castle-white.png",
-    "color": "white"
-  },
-  {
-    "id": 11,
-    "name": "Classic Calacatta",
-    "slug": "classic-calacatta",
-    "image": "/quartz/classic-calacatta.png",
-    "color": "white"
-  },
-  {
-    "id": 12,
-    "name": "Classique Soapstone",
-    "slug": "classique-soapstone",
-    "image": "/quartz/classique-soapstone.png",
-    "color": "dark_grey"
-  },
-  {
-    "id": 13,
-    "name": "Coastal Fog",
-    "slug": "coastal-fog",
-    "image": "/quartz/coastal-fog.png",
-    "color": "grey"
-  },
-  {
-    "id": 14,
-    "name": "Dark Magma",
-    "slug": "dark-magma",
-    "image": "/quartz/dark-magma.png",
-    "color": "dark_grey"
-  },
-  {
-    "id": 15,
-    "name": "Dessert Sand",
-    "slug": "dessert-sand",
-    "image": "/quartz/dessert-sand.png",
-    "color": "beige"
-  },
-  {
-    "id": 16,
-    "name": "Divine Mist",
-    "slug": "divine-mist",
-    "image": "/quartz/divine-mist.png",
-    "color": "white"
-  },
-  {
-    "id": 17,
-    "name": "DS Light Grey",
-    "slug": "ds-light-grey",
-    "image": "/quartz/ds-light-grey.png",
-    "color": "grey"
-  },
-  {
-    "id": 18,
-    "name": "Dune Mist",
-    "slug": "dune-mist",
-    "image": "/quartz/dune-mist.png",
-    "color": "beige"
-  },
-  {
-    "id": 19,
-    "name": "Elan Gray",
-    "slug": "elan-gray",
-    "image": "/quartz/elan-gray.png",
-    "color": "grey"
-  },
-  {
-    "id": 20,
-    "name": "Fluttering White",
-    "slug": "fluttering-white",
-    "image": "/quartz/fluttering-white.png",
-    "color": "white"
-  },
-  {
-    "id": 21,
-    "name": "Gallium",
-    "slug": "gallium",
-    "image": "/quartz/gallium.png",
-    "color": "grey"
-  },
-  {
-    "id": 22,
-    "name": "Gold Dust",
-    "slug": "gold-dust",
-    "image": "/quartz/gold-dust.png",
-    "color": "beige"
-  },
-  {
-    "id": 23,
-    "name": "Gold Rush",
-    "slug": "gold-rush",
-    "image": "/quartz/gold-rush.png",
-    "color": "beige"
-  },
-  {
-    "id": 24,
-    "name": "Golden Ripples",
-    "slug": "golden-ripples",
-    "image": "/quartz/golden-ripples.png",
-    "color": "beige"
-  },
-  {
-    "id": 25,
-    "name": "Gray Pearl",
-    "slug": "gray-pearl",
-    "image": "/quartz/gray-pearl.png",
-    "color": "grey"
-  },
-  {
-    "id": 26,
-    "name": "Gray Sand",
-    "slug": "gray-sand",
-    "image": "/quartz/gray-sand.png",
-    "color": "grey"
-  },
-  {
-    "id": 27,
-    "name": "Gulmarg Pink",
-    "slug": "gulmarg-pink",
-    "image": "/quartz/gulmarg-pink.png",
-    "color": "pink"
-  },
-  {
-    "id": 28,
-    "name": "Ice Storm",
-    "slug": "ice-storm",
-    "image": "/quartz/ice-storm.png",
-    "color": "white"
-  },
-  {
-    "id": 29,
-    "name": "Lavendar Crest",
-    "slug": "lavendar-crest",
-    "image": "/quartz/lavendar-crest.png",
-    "color": "grey"
-  },
-  {
-    "id": 30,
-    "name": "Lustre Cream",
-    "slug": "lustre-cream",
-    "image": "/quartz/lustre-cream.png",
-    "color": "cream"
-  },
-  {
-    "id": 31,
-    "name": "Lustre Grey",
-    "slug": "lustre-grey",
-    "image": "/quartz/lustre-grey.png",
-    "color": "grey"
-  },
-  {
-    "id": 32,
-    "name": "Lustre Red",
-    "slug": "lustre-red",
-    "image": "/quartz/lustre-red.png",
-    "color": "red"
-  },
-  {
-    "id": 33,
-    "name": "Magic Night",
-    "slug": "magic-night",
-    "image": "/quartz/magic-night.png",
-    "color": "dark_grey"
-  },
-  {
-    "id": 34,
-    "name": "Mint Mirage",
-    "slug": "mint-mirage",
-    "image": "/quartz/mint-mirage.png",
-    "color": "green"
-  },
-  {
-    "id": 35,
-    "name": "Morning Mist",
-    "slug": "morning-mist",
-    "image": "/quartz/morning-mist.png",
-    "color": "grey"
-  },
-  {
-    "id": 36,
-    "name": "Natura Beige",
-    "slug": "natura-beige",
-    "image": "/quartz/natura-beige.png",
-    "color": "beige"
-  },
-  {
-    "id": 37,
-    "name": "Natura White",
-    "slug": "natura-white",
-    "image": "/quartz/natura-white.png",
-    "color": "white"
-  },
-  {
-    "id": 38,
-    "name": "Nexus White",
-    "slug": "nexus-white",
-    "image": "/quartz/nexus-white.png",
-    "color": "white"
-  },
-  {
-    "id": 39,
-    "name": "Pure Cemento",
-    "slug": "pure-cemento",
-    "image": "/quartz/pure-cemento.png",
-    "color": "grey"
-  },
-  {
-    "id": 40,
-    "name": "Pure Grey",
-    "slug": "pure-grey",
-    "image": "/quartz/pure-grey.png",
-    "color": "grey"
-  },
-  {
-    "id": 41,
-    "name": "Sawai Emperador",
-    "slug": "sawai-emperador",
-    "image": "/quartz/sawai-emperador.png",
-    "color": "dark_grey"
-  },
-  {
-    "id": 42,
-    "name": "Starry White",
-    "slug": "starry-white",
-    "image": "/quartz/starry-white.png",
-    "color": "white"
-  },
-  {
-    "id": 43,
-    "name": "Super White",
-    "slug": "super-white",
-    "image": "/quartz/super-white.png",
-    "color": "white"
-  },
-  {
-    "id": 44,
-    "name": "Uno Beige",
-    "slug": "uno-beige",
-    "image": "/quartz/uno-beige.png",
-    "color": "beige"
-  },
-  {
-    "id": 45,
-    "name": "Uno Grey",
-    "slug": "uno-grey",
-    "image": "/quartz/uno-grey.png",
-    "color": "grey"
-  },
-  {
-    "id": 46,
-    "name": "Venera",
-    "slug": "venera",
-    "image": "/quartz/venera.png",
-    "color": "cream"
-  },
-  {
-    "id": 47,
-    "name": "White Sand",
-    "slug": "white-sand",
-    "image": "/quartz/white-sand.png",
-    "color": "white"
-  },
-  {
-    "id": 48,
-    "name": "White Vortex",
-    "slug": "white-vortex",
-    "image": "/quartz/white-vortex.png",
-    "color": "white"
-  },
-  {
-    "id": 49,
-    "name": "Winter Grey",
-    "slug": "winter-grey",
-    "image": "/quartz/winter-grey.png",
-    "color": "grey"
-  }
+  { "id": 1,  "name": "Absolute White",     "slug": "absolute-white",     "image": "/quartz/absolute-white.png",     "color": "white",    "sku": "MV-101",     "price": 960  },
+  { "id": 2,  "name": "Amazonite",          "slug": "amazonite",          "image": "/quartz/amazonite.png",          "color": "aqua",     "sku": "AR-103",     "price": 1465 },
+  { "id": 3,  "name": "Azure",              "slug": "azure",              "image": "/quartz/azure.png",              "color": "grey",     "sku": "PS-104",     "price": 1350 },
+  { "id": 4,  "name": "Black Velvet",       "slug": "black-velvet",       "image": "/quartz/black-velvet.png",       "color": "dark_grey","sku": "PL-104-3",   "price": 1465 },
+  { "id": 5,  "name": "Blossom White",      "slug": "blossom-white",      "image": "/quartz/blossom-white.png",      "color": "white",    "sku": "AD-421-6",   "price": 1135 },
+  { "id": 6,  "name": "Calcatta Emerald",   "slug": "calcatta-emerald",   "image": "/quartz/calcatta-emerald.png",   "color": "green",    "sku": "AR-102",     "price": 1965 },
+  { "id": 7,  "name": "Calcatta Ornate",    "slug": "calcatta-ornate",    "image": "/quartz/calcatta-ornate.png",    "color": "white",    "sku": "PL-101-M8",  "price": 1700 },
+  { "id": 8,  "name": "Calcatta Taj",       "slug": "calcatta-taj",       "image": "/quartz/calcatta-taj.png",       "color": "cream",    "sku": "AR-106",     "price": 1965 },
+  { "id": 9,  "name": "Cappuccino Cream",   "slug": "cappuccino-cream",   "image": "/quartz/cappuccino-cream.png",   "color": "cream",    "sku": "PS-105",     "price": 1350 },
+  { "id": 10, "name": "Castle White",       "slug": "castle-white",       "image": "/quartz/castle-white.png",       "color": "white",    "sku": "AL-3113",    "price": 1020 },
+  { "id": 11, "name": "Classic Calacatta",  "slug": "classic-calacatta",  "image": "/quartz/classic-calacatta.png",  "color": "white",    "sku": "AD-101-M2",  "price": 1270 },
+  { "id": 12, "name": "Classique Soapstone","slug": "classique-soapstone","image": "/quartz/classique-soapstone.png","color": "dark_grey","sku": "AD-3033-14", "price": 1270 },
+  { "id": 13, "name": "Coastal Fog",        "slug": "coastal-fog",        "image": "/quartz/coastal-fog.png",        "color": "grey",     "sku": "AL-4155",    "price": 1135 },
+  { "id": 14, "name": "Dark Magma",         "slug": "dark-magma",         "image": "/quartz/dark-magma.png",         "color": "dark_grey","sku": "PL-634-17",  "price": 2045 },
+  { "id": 15, "name": "Dessert Sand",       "slug": "dessert-sand",       "image": "/quartz/dessert-sand.png",       "color": "beige",    "sku": "OG-302",     "price": 670  },
+  { "id": 16, "name": "Divine Mist",        "slug": "divine-mist",        "image": "/quartz/divine-mist.png",        "color": "white",    "sku": null,         "price": null },
+  { "id": 17, "name": "DS Light Grey",      "slug": "ds-light-grey",      "image": "/quartz/ds-light-grey.png",      "color": "grey",     "sku": "OG-5033",    "price": 770  },
+  { "id": 18, "name": "Dune Mist",          "slug": "dune-mist",          "image": "/quartz/dune-mist.png",          "color": "beige",    "sku": "CRP-04L",    "price": 1270 },
+  { "id": 19, "name": "Elan Gray",          "slug": "elan-gray",          "image": "/quartz/elan-gray.png",          "color": "grey",     "sku": null,         "price": null },
+  { "id": 20, "name": "Fluttering White",   "slug": "fluttering-white",   "image": "/quartz/fluttering-white.png",   "color": "white",    "sku": "MV-321",     "price": 960  },
+  { "id": 21, "name": "Gallium",            "slug": "gallium",            "image": "/quartz/gallium.png",            "color": "grey",     "sku": "AL-2211",    "price": 1020 },
+  { "id": 22, "name": "Gold Dust",          "slug": "gold-dust",          "image": "/quartz/gold-dust.png",          "color": "beige",    "sku": "AL-2966",    "price": 1020 },
+  { "id": 23, "name": "Gold Rush",          "slug": "gold-rush",          "image": "/quartz/gold-rush.png",          "color": "beige",    "sku": "PL-191",     "price": 1270 },
+  { "id": 24, "name": "Golden Ripples",     "slug": "golden-ripples",     "image": "/quartz/golden-ripples.png",     "color": "beige",    "sku": "MV-391",     "price": 960  },
+  { "id": 25, "name": "Gray Pearl",         "slug": "gray-pearl",         "image": "/quartz/gray-pearl.png",         "color": "grey",     "sku": "AR-104",     "price": 1465 },
+  { "id": 26, "name": "Gray Sand",          "slug": "gray-sand",          "image": "/quartz/gray-sand.png",          "color": "grey",     "sku": "OG-303",     "price": 670  },
+  { "id": 27, "name": "Gulmarg Pink",       "slug": "gulmarg-pink",       "image": "/quartz/gulmarg-pink.png",       "color": "pink",     "sku": "PS-103",     "price": 1350 },
+  { "id": 28, "name": "Ice Storm",          "slug": "ice-storm",          "image": "/quartz/ice-storm.png",          "color": "white",    "sku": "PL-481",     "price": 1270 },
+  { "id": 29, "name": "Lavendar Crest",     "slug": "lavendar-crest",     "image": "/quartz/lavendar-crest.png",     "color": "grey",     "sku": "PS-102",     "price": 1350 },
+  { "id": 30, "name": "Lustre Cream",       "slug": "lustre-cream",       "image": "/quartz/lustre-cream.png",       "color": "cream",    "sku": "MV-605",     "price": 920  },
+  { "id": 31, "name": "Lustre Grey",        "slug": "lustre-grey",        "image": "/quartz/lustre-grey.png",        "color": "grey",     "sku": "MV-603",     "price": 920  },
+  { "id": 32, "name": "Lustre Red",         "slug": "lustre-red",         "image": "/quartz/lustre-red.png",         "color": "red",      "sku": "MV-609",     "price": 920  },
+  { "id": 33, "name": "Magic Night",        "slug": "magic-night",        "image": "/quartz/magic-night.png",        "color": "dark_grey","sku": "AD-101-2",   "price": 1135 },
+  { "id": 34, "name": "Mint Mirage",        "slug": "mint-mirage",        "image": "/quartz/mint-mirage.png",        "color": "green",    "sku": "PS-101",     "price": 1350 },
+  { "id": 35, "name": "Morning Mist",       "slug": "morning-mist",       "image": "/quartz/morning-mist.png",       "color": "grey",     "sku": "AL-3922",    "price": 1135 },
+  { "id": 36, "name": "Natura Beige",       "slug": "natura-beige",       "image": "/quartz/natura-beige.png",       "color": "beige",    "sku": "AL-1922",    "price": 1135 },
+  { "id": 37, "name": "Natura White",       "slug": "natura-white",       "image": "/quartz/natura-white.png",       "color": "white",    "sku": "AL-1111",    "price": 1135 },
+  { "id": 38, "name": "Nexus White",        "slug": "nexus-white",        "image": "/quartz/nexus-white.png",        "color": "white",    "sku": "AL-3210",    "price": 1135 },
+  { "id": 39, "name": "Pure Cemento",       "slug": "pure-cemento",       "image": "/quartz/pure-cemento.png",       "color": "grey",     "sku": "OG-607",     "price": 725  },
+  { "id": 40, "name": "Pure Grey",          "slug": "pure-grey",          "image": "/quartz/pure-grey.png",          "color": "grey",     "sku": "OG-503",     "price": 730  },
+  { "id": 41, "name": "Sawai Emperador",    "slug": "sawai-emperador",    "image": "/quartz/sawai-emperador.png",    "color": "dark_grey","sku": "AR-108",     "price": 1485 },
+  { "id": 42, "name": "Starry White",       "slug": "starry-white",       "image": "/quartz/starry-white.png",       "color": "white",    "sku": "OG-101",     "price": 625  },
+  { "id": 43, "name": "Super White",        "slug": "super-white",        "image": "/quartz/super-white.png",        "color": "white",    "sku": "PL-101",     "price": 1270 },
+  { "id": 44, "name": "Uno Beige",          "slug": "uno-beige",          "image": "/quartz/uno-beige.png",          "color": "beige",    "sku": "OG-605",     "price": 725  },
+  { "id": 45, "name": "Uno Grey",           "slug": "uno-grey",           "image": "/quartz/uno-grey.png",           "color": "grey",     "sku": "OG-603",     "price": 725  },
+  { "id": 46, "name": "Venera",             "slug": "venera",             "image": "/quartz/venera.png",             "color": "cream",    "sku": "AR-105",     "price": 1465 },
+  { "id": 47, "name": "White Sand",         "slug": "white-sand",         "image": "/quartz/white-sand.png",         "color": "white",    "sku": "OG-301",     "price": 670  },
+  { "id": 48, "name": "White Vortex",       "slug": "white-vortex",       "image": "/quartz/white-vortex.png",       "color": "white",    "sku": "PL-101-B1",  "price": 1465 },
+  { "id": 49, "name": "Winter Grey",        "slug": "winter-grey",        "image": "/quartz/winter-grey.png",        "color": "grey",     "sku": "AL-1136",    "price": 1135 }
 ]
