@@ -192,10 +192,25 @@ export default function QuartzPage() {
   return (
     <>
       <style>{`
+        #print-page {
+          position: fixed;
+          top: -9999px;
+          left: -9999px;
+          width: 210mm;
+          background: white;
+          color: black;
+          pointer-events: none;
+        }
         @media print {
-          body { background: white !important; color: black !important; }
+          body { background: white !important; }
           .no-print { display: none !important; }
-          #print-page { display: block !important; }
+          #print-page {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            pointer-events: auto !important;
+          }
         }
       `}</style>
 
