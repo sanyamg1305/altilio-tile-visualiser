@@ -1,51 +1,345 @@
 [
-  { "id": 1,  "name": "Cappuccino Cream",    "slug": "cappuccino-cream",    "image": "/quartz/cappuccino-cream.png",    "color": "cream" },
-  { "id": 2,  "name": "Castle White",         "slug": "castle-white",         "image": "/quartz/castle-white.png",         "color": "white" },
-  { "id": 3,  "name": "Classic Calacatta",    "slug": "classic-calacatta",    "image": "/quartz/classic-calacatta.png",    "color": "white" },
-  { "id": 4,  "name": "Classique Soapstone",  "slug": "classique-soapstone",  "image": "/quartz/classique-soapstone.png",  "color": "dark_grey" },
-  { "id": 5,  "name": "Coastal Fog",          "slug": "coastal-fog",          "image": "/quartz/coastal-fog.png",          "color": "grey" },
-  { "id": 6,  "name": "Dark Magma",           "slug": "dark-magma",           "image": "/quartz/dark-magma.png",           "color": "dark_grey" },
-  { "id": 7,  "name": "Dessert Sand",         "slug": "dessert-sand",         "image": "/quartz/dessert-sand.png",         "color": "beige" },
-  { "id": 8,  "name": "Elan Gray",            "slug": "elan-gray",            "image": "/quartz/elan-gray.png",            "color": "grey" },
-  { "id": 9,  "name": "Calcatta Emerald",     "slug": "calcatta-emerald",     "image": "/quartz/calcatta-emerald.png",     "color": "green" },
-  { "id": 10, "name": "Calcatta Ornate",      "slug": "calcatta-ornate",      "image": "/quartz/calcatta-ornate.png",      "color": "white" },
-  { "id": 11, "name": "Calcatta Taj",         "slug": "calcatta-taj",         "image": "/quartz/calcatta-taj.png",         "color": "cream" },
-  { "id": 12, "name": "DS Light Grey",        "slug": "ds-light-grey",        "image": "/quartz/ds-light-grey.png",        "color": "grey" },
-  { "id": 13, "name": "Divine Mist",          "slug": "divine-mist",          "image": "/quartz/divine-mist.png",          "color": "white" },
-  { "id": 14, "name": "Dune Mist",            "slug": "dune-mist",            "image": "/quartz/dune-mist.png",            "color": "beige" },
-  { "id": 15, "name": "Fluttering White",     "slug": "fluttering-white",     "image": "/quartz/fluttering-white.png",     "color": "white" },
-  { "id": 16, "name": "Gallium",              "slug": "gallium",              "image": "/quartz/gallium.png",              "color": "grey" },
-  { "id": 17, "name": "Gold Dust",            "slug": "gold-dust",            "image": "/quartz/gold-dust.png",            "color": "beige" },
-  { "id": 18, "name": "Gold Rush",            "slug": "gold-rush",            "image": "/quartz/gold-rush.png",            "color": "beige" },
-  { "id": 19, "name": "Golden Ripples",       "slug": "golden-ripples",       "image": "/quartz/golden-ripples.png",       "color": "beige" },
-  { "id": 20, "name": "Gray Pearl",           "slug": "gray-pearl",           "image": "/quartz/gray-pearl.png",           "color": "grey" },
-  { "id": 21, "name": "Gray Sand",            "slug": "gray-sand",            "image": "/quartz/gray-sand.png",            "color": "grey" },
-  { "id": 22, "name": "Gulmarg Pink",         "slug": "gulmarg-pink",         "image": "/quartz/gulmarg-pink.png",         "color": "pink" },
-  { "id": 23, "name": "Ice Storm",            "slug": "ice-storm",            "image": "/quartz/ice-storm.png",            "color": "white" },
-  { "id": 24, "name": "Lavendar Crest",       "slug": "lavendar-crest",       "image": "/quartz/lavendar-crest.png",       "color": "grey" },
-  { "id": 25, "name": "Lustre Cream",         "slug": "lustre-cream",         "image": "/quartz/lustre-cream.png",         "color": "cream" },
-  { "id": 26, "name": "Lustre Grey",          "slug": "lustre-grey",          "image": "/quartz/lustre-grey.png",          "color": "grey" },
-  { "id": 27, "name": "Lustre Red",           "slug": "lustre-red",           "image": "/quartz/lustre-red.png",           "color": "red" },
-  { "id": 28, "name": "Magic Night",          "slug": "magic-night",          "image": "/quartz/magic-night.png",          "color": "dark_grey" },
-  { "id": 29, "name": "Mint Mirage",          "slug": "mint-mirage",          "image": "/quartz/mint-mirage.png",          "color": "green" },
-  { "id": 30, "name": "Morning Mist",         "slug": "morning-mist",         "image": "/quartz/morning-mist.png",         "color": "grey" },
-  { "id": 31, "name": "Natura Beige",         "slug": "natura-beige",         "image": "/quartz/natura-beige.png",         "color": "beige" },
-  { "id": 32, "name": "Natura White",         "slug": "natura-white",         "image": "/quartz/natura-white.png",         "color": "white" },
-  { "id": 33, "name": "Nexus White",          "slug": "nexus-white",          "image": "/quartz/nexus-white.png",          "color": "white" },
-  { "id": 34, "name": "Pure Cemento",         "slug": "pure-cemento",         "image": "/quartz/pure-cemento.png",         "color": "grey" },
-  { "id": 35, "name": "Pure Grey",            "slug": "pure-grey",            "image": "/quartz/pure-grey.png",            "color": "grey" },
-  { "id": 36, "name": "Sawai Emperador",      "slug": "sawai-emperador",      "image": "/quartz/sawai-emperador.png",      "color": "dark_grey" },
-  { "id": 37, "name": "Starry White",         "slug": "starry-white",         "image": "/quartz/starry-white.png",         "color": "white" },
-  { "id": 38, "name": "Super White",          "slug": "super-white",          "image": "/quartz/super-white.png",          "color": "white" },
-  { "id": 39, "name": "Uno Beige",            "slug": "uno-beige",            "image": "/quartz/uno-beige.png",            "color": "beige" },
-  { "id": 40, "name": "Uno Grey",             "slug": "uno-grey",             "image": "/quartz/uno-grey.png",             "color": "grey" },
-  { "id": 41, "name": "Venera",               "slug": "venera",               "image": "/quartz/venera.png",               "color": "cream" },
-  { "id": 42, "name": "Absolute White",       "slug": "absolute-white",       "image": "/quartz/absolute-white.png",       "color": "white" },
-  { "id": 43, "name": "Amazonite",            "slug": "amazonite",            "image": "/quartz/amazonite.png",            "color": "aqua" },
-  { "id": 44, "name": "Azure",                "slug": "azure",                "image": "/quartz/azure.png",                "color": "grey" },
-  { "id": 45, "name": "Black Velvet",         "slug": "black-velvet",         "image": "/quartz/black-velvet.png",         "color": "dark_grey" },
-  { "id": 46, "name": "Blossom White",        "slug": "blossom-white",        "image": "/quartz/blossom-white.png",        "color": "white" },
-  { "id": 47, "name": "White Sand",           "slug": "white-sand",           "image": "/quartz/white-sand.png",           "color": "white" },
-  { "id": 48, "name": "White Vortex",         "slug": "white-vortex",         "image": "/quartz/white-vortex.png",         "color": "white" },
-  { "id": 49, "name": "Winter Grey",          "slug": "winter-grey",          "image": "/quartz/winter-grey.png",          "color": "grey" }
+  {
+    "id": 1,
+    "name": "Absolute White",
+    "slug": "absolute-white",
+    "image": "/quartz/absolute-white.png",
+    "color": "white"
+  },
+  {
+    "id": 2,
+    "name": "Amazonite",
+    "slug": "amazonite",
+    "image": "/quartz/amazonite.png",
+    "color": "aqua"
+  },
+  {
+    "id": 3,
+    "name": "Azure",
+    "slug": "azure",
+    "image": "/quartz/azure.png",
+    "color": "grey"
+  },
+  {
+    "id": 4,
+    "name": "Black Velvet",
+    "slug": "black-velvet",
+    "image": "/quartz/black-velvet.png",
+    "color": "dark_grey"
+  },
+  {
+    "id": 5,
+    "name": "Blossom White",
+    "slug": "blossom-white",
+    "image": "/quartz/blossom-white.png",
+    "color": "white"
+  },
+  {
+    "id": 6,
+    "name": "Calcatta Emerald",
+    "slug": "calcatta-emerald",
+    "image": "/quartz/calcatta-emerald.png",
+    "color": "green"
+  },
+  {
+    "id": 7,
+    "name": "Calcatta Ornate",
+    "slug": "calcatta-ornate",
+    "image": "/quartz/calcatta-ornate.png",
+    "color": "white"
+  },
+  {
+    "id": 8,
+    "name": "Calcatta Taj",
+    "slug": "calcatta-taj",
+    "image": "/quartz/calcatta-taj.png",
+    "color": "cream"
+  },
+  {
+    "id": 9,
+    "name": "Cappuccino Cream",
+    "slug": "cappuccino-cream",
+    "image": "/quartz/cappuccino-cream.png",
+    "color": "cream"
+  },
+  {
+    "id": 10,
+    "name": "Castle White",
+    "slug": "castle-white",
+    "image": "/quartz/castle-white.png",
+    "color": "white"
+  },
+  {
+    "id": 11,
+    "name": "Classic Calacatta",
+    "slug": "classic-calacatta",
+    "image": "/quartz/classic-calacatta.png",
+    "color": "white"
+  },
+  {
+    "id": 12,
+    "name": "Classique Soapstone",
+    "slug": "classique-soapstone",
+    "image": "/quartz/classique-soapstone.png",
+    "color": "dark_grey"
+  },
+  {
+    "id": 13,
+    "name": "Coastal Fog",
+    "slug": "coastal-fog",
+    "image": "/quartz/coastal-fog.png",
+    "color": "grey"
+  },
+  {
+    "id": 14,
+    "name": "Dark Magma",
+    "slug": "dark-magma",
+    "image": "/quartz/dark-magma.png",
+    "color": "dark_grey"
+  },
+  {
+    "id": 15,
+    "name": "Dessert Sand",
+    "slug": "dessert-sand",
+    "image": "/quartz/dessert-sand.png",
+    "color": "beige"
+  },
+  {
+    "id": 16,
+    "name": "Divine Mist",
+    "slug": "divine-mist",
+    "image": "/quartz/divine-mist.png",
+    "color": "white"
+  },
+  {
+    "id": 17,
+    "name": "DS Light Grey",
+    "slug": "ds-light-grey",
+    "image": "/quartz/ds-light-grey.png",
+    "color": "grey"
+  },
+  {
+    "id": 18,
+    "name": "Dune Mist",
+    "slug": "dune-mist",
+    "image": "/quartz/dune-mist.png",
+    "color": "beige"
+  },
+  {
+    "id": 19,
+    "name": "Elan Gray",
+    "slug": "elan-gray",
+    "image": "/quartz/elan-gray.png",
+    "color": "grey"
+  },
+  {
+    "id": 20,
+    "name": "Fluttering White",
+    "slug": "fluttering-white",
+    "image": "/quartz/fluttering-white.png",
+    "color": "white"
+  },
+  {
+    "id": 21,
+    "name": "Gallium",
+    "slug": "gallium",
+    "image": "/quartz/gallium.png",
+    "color": "grey"
+  },
+  {
+    "id": 22,
+    "name": "Gold Dust",
+    "slug": "gold-dust",
+    "image": "/quartz/gold-dust.png",
+    "color": "beige"
+  },
+  {
+    "id": 23,
+    "name": "Gold Rush",
+    "slug": "gold-rush",
+    "image": "/quartz/gold-rush.png",
+    "color": "beige"
+  },
+  {
+    "id": 24,
+    "name": "Golden Ripples",
+    "slug": "golden-ripples",
+    "image": "/quartz/golden-ripples.png",
+    "color": "beige"
+  },
+  {
+    "id": 25,
+    "name": "Gray Pearl",
+    "slug": "gray-pearl",
+    "image": "/quartz/gray-pearl.png",
+    "color": "grey"
+  },
+  {
+    "id": 26,
+    "name": "Gray Sand",
+    "slug": "gray-sand",
+    "image": "/quartz/gray-sand.png",
+    "color": "grey"
+  },
+  {
+    "id": 27,
+    "name": "Gulmarg Pink",
+    "slug": "gulmarg-pink",
+    "image": "/quartz/gulmarg-pink.png",
+    "color": "pink"
+  },
+  {
+    "id": 28,
+    "name": "Ice Storm",
+    "slug": "ice-storm",
+    "image": "/quartz/ice-storm.png",
+    "color": "white"
+  },
+  {
+    "id": 29,
+    "name": "Lavendar Crest",
+    "slug": "lavendar-crest",
+    "image": "/quartz/lavendar-crest.png",
+    "color": "grey"
+  },
+  {
+    "id": 30,
+    "name": "Lustre Cream",
+    "slug": "lustre-cream",
+    "image": "/quartz/lustre-cream.png",
+    "color": "cream"
+  },
+  {
+    "id": 31,
+    "name": "Lustre Grey",
+    "slug": "lustre-grey",
+    "image": "/quartz/lustre-grey.png",
+    "color": "grey"
+  },
+  {
+    "id": 32,
+    "name": "Lustre Red",
+    "slug": "lustre-red",
+    "image": "/quartz/lustre-red.png",
+    "color": "red"
+  },
+  {
+    "id": 33,
+    "name": "Magic Night",
+    "slug": "magic-night",
+    "image": "/quartz/magic-night.png",
+    "color": "dark_grey"
+  },
+  {
+    "id": 34,
+    "name": "Mint Mirage",
+    "slug": "mint-mirage",
+    "image": "/quartz/mint-mirage.png",
+    "color": "green"
+  },
+  {
+    "id": 35,
+    "name": "Morning Mist",
+    "slug": "morning-mist",
+    "image": "/quartz/morning-mist.png",
+    "color": "grey"
+  },
+  {
+    "id": 36,
+    "name": "Natura Beige",
+    "slug": "natura-beige",
+    "image": "/quartz/natura-beige.png",
+    "color": "beige"
+  },
+  {
+    "id": 37,
+    "name": "Natura White",
+    "slug": "natura-white",
+    "image": "/quartz/natura-white.png",
+    "color": "white"
+  },
+  {
+    "id": 38,
+    "name": "Nexus White",
+    "slug": "nexus-white",
+    "image": "/quartz/nexus-white.png",
+    "color": "white"
+  },
+  {
+    "id": 39,
+    "name": "Pure Cemento",
+    "slug": "pure-cemento",
+    "image": "/quartz/pure-cemento.png",
+    "color": "grey"
+  },
+  {
+    "id": 40,
+    "name": "Pure Grey",
+    "slug": "pure-grey",
+    "image": "/quartz/pure-grey.png",
+    "color": "grey"
+  },
+  {
+    "id": 41,
+    "name": "Sawai Emperador",
+    "slug": "sawai-emperador",
+    "image": "/quartz/sawai-emperador.png",
+    "color": "dark_grey"
+  },
+  {
+    "id": 42,
+    "name": "Starry White",
+    "slug": "starry-white",
+    "image": "/quartz/starry-white.png",
+    "color": "white"
+  },
+  {
+    "id": 43,
+    "name": "Super White",
+    "slug": "super-white",
+    "image": "/quartz/super-white.png",
+    "color": "white"
+  },
+  {
+    "id": 44,
+    "name": "Uno Beige",
+    "slug": "uno-beige",
+    "image": "/quartz/uno-beige.png",
+    "color": "beige"
+  },
+  {
+    "id": 45,
+    "name": "Uno Grey",
+    "slug": "uno-grey",
+    "image": "/quartz/uno-grey.png",
+    "color": "grey"
+  },
+  {
+    "id": 46,
+    "name": "Venera",
+    "slug": "venera",
+    "image": "/quartz/venera.png",
+    "color": "cream"
+  },
+  {
+    "id": 47,
+    "name": "White Sand",
+    "slug": "white-sand",
+    "image": "/quartz/white-sand.png",
+    "color": "white"
+  },
+  {
+    "id": 48,
+    "name": "White Vortex",
+    "slug": "white-vortex",
+    "image": "/quartz/white-vortex.png",
+    "color": "white"
+  },
+  {
+    "id": 49,
+    "name": "Winter Grey",
+    "slug": "winter-grey",
+    "image": "/quartz/winter-grey.png",
+    "color": "grey"
+  }
 ]
