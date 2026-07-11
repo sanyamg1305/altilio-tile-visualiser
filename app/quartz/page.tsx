@@ -195,20 +195,7 @@ export default function QuartzPage() {
         @media print {
           body { background: white !important; color: black !important; }
           .no-print { display: none !important; }
-          .print-grid { display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px; }
-          .print-card { break-inside: avoid; border: 1px solid #e7e5e4; border-radius: 8px; overflow: hidden; }
-          .print-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
-          .print-card-body { padding: 8px 12px; }
-          .print-card-name { font-size: 13px; font-weight: 600; color: #1c1917; }
-          .print-card-sub { font-size: 11px; color: #78716c; margin-top: 2px; }
-          .print-company { display: flex !important; justify-content: space-between; align-items: flex-start; padding: 16px 24px; border-bottom: 2px solid #1c1917; }
-          .print-company-name { font-size: 20px; font-weight: 700; color: #1c1917; margin: 0 0 2px; }
-          .print-company-tag { font-size: 11px; color: #78716c; font-style: italic; }
-          .print-company-contact { text-align: right; font-size: 11px; color: #57534e; line-height: 1.6; }
-          .print-toc { display: block !important; padding: 14px 24px; background: #fafaf9; border-bottom: 1px solid #e7e5e4; }
-          .print-toc-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #78716c; margin: 0 0 6px; }
-          .print-toc-list { margin: 0; padding-left: 16px; font-size: 10px; color: #57534e; line-height: 1.8; }
-          .print-footer { display: flex !important; padding: 12px 24px; border-top: 1px solid #e7e5e4; font-size: 10px; color: #a8a29e; justify-content: space-between; margin-top: 16px; }
+          #print-page { display: block !important; }
         }
       `}</style>
 
@@ -228,7 +215,7 @@ export default function QuartzPage() {
 
         <div className="pt-14 sm:pt-16">
           {/* Header */}
-          <div className="px-4 sm:px-8 py-6 sm:py-10 border-b border-stone-800">
+          <div className="no-print px-4 sm:px-8 py-6 sm:py-10 border-b border-stone-800">
             <p className="no-print text-stone-500 text-xs uppercase tracking-widest mb-2">Mozart · Surface Solutions</p>
             <div className="flex items-end justify-between gap-3">
               <div>
@@ -260,9 +247,60 @@ export default function QuartzPage() {
             </div>
           </div>
 
-          <div className="flex">
+          {/* Print-only full page — outside the flex layout */}
+          <div id="print-page" className="hidden">
+            {/* Company header */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", padding: "16px 24px", borderBottom: "2px solid #1c1917" }}>
+              <div>
+                <p style={{ fontSize: "20px", fontWeight: 700, color: "#1c1917", margin: "0 0 2px" }}>Aashiyana Decor</p>
+                <p style={{ fontSize: "11px", color: "#78716c", fontStyle: "italic" }}>For Stylish Living</p>
+                <p style={{ fontSize: "10px", color: "#78716c", marginTop: "4px", lineHeight: "1.6" }}>
+                  Plot No. 8, Rajeev Vihar, Opposite Metro Pillar No. 30<br />
+                  Mansarovar, Jaipur 302019
+                </p>
+              </div>
+              <div style={{ textAlign: "right", fontSize: "11px", color: "#57534e", lineHeight: "1.6" }}>
+                <p>Mob: 9414153909 / 9314021950</p>
+                <p style={{ marginTop: "6px", fontWeight: 600, color: "#1c1917" }}>Specta Quartz Surfaces — Price List (incl. GST) · 01.04.2026</p>
+              </div>
+            </div>
+            {/* T&C */}
+            <div style={{ padding: "12px 24px", background: "#fafaf9", borderBottom: "1px solid #e7e5e4" }}>
+              <p style={{ fontSize: "10px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "#78716c", margin: "0 0 4px" }}>Terms &amp; Conditions</p>
+              <ol style={{ margin: 0, paddingLeft: "16px", fontSize: "10px", color: "#57534e", lineHeight: "1.8" }}>
+                <li>Slab size: 3275 × 1460 mm (129″ × 57″) — 51.47 sqft per slab.</li>
+                <li>All prices are inclusive of GST @ 18%.</li>
+                <li>Payment terms: 100% advance.</li>
+                <li>Freight charges are extra and applicable as per delivery location.</li>
+                <li>Prices are subject to change without prior notice.</li>
+                <li>Aashiyana Decor is not responsible for colour variation between digital images and actual slabs.</li>
+              </ol>
+            </div>
+            {/* Image grid */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", padding: "20px 24px" }}>
+              {allItems.filter((q) => likes.has(q.id)).map((q) => (
+                <div key={q.id} style={{ border: "1px solid #e7e5e4", borderRadius: "8px", overflow: "hidden", breakInside: "avoid" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={q.image} alt={q.name} style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover", display: "block" }} />
+                  <div style={{ padding: "8px 12px" }}>
+                    <p style={{ fontSize: "13px", fontWeight: 600, color: "#1c1917", margin: 0 }}>{q.name}</p>
+                    <p style={{ fontSize: "11px", color: "#78716c", marginTop: "2px", textTransform: "capitalize" }}>
+                      {q.color.replace("_", " ")} · {q.sku ?? ""}{q.price ? ` · ₹${q.price.toLocaleString("en-IN")}/sqft` : ""}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Footer */}
+            <div style={{ padding: "10px 24px", borderTop: "1px solid #e7e5e4", fontSize: "10px", color: "#a8a29e", display: "flex", justifyContent: "space-between" }}>
+              <span>Aashiyana Decor · Jaipur · 9414153909</span>
+              <span>This is a computer-generated quotation and does not require a signature.</span>
+            </div>
+          </div>
+
+          <div className="flex no-print">
             {/* Desktop sidebar */}
-            <div className="no-print hidden sm:flex w-56 shrink-0 border-r border-stone-800 p-6 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto flex-col">
+            <div className="hidden sm:flex w-56 shrink-0 border-r border-stone-800 p-6 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto flex-col">
               <SidebarContent />
             </div>
 
@@ -348,58 +386,6 @@ export default function QuartzPage() {
               )}
             </div>
 
-            {/* Print-only company header */}
-            <div className="print-company hidden">
-              <div>
-                <p className="print-company-name">Aashiyana Decor</p>
-                <p className="print-company-tag">For Stylish Living</p>
-                <p style={{ fontSize: "10px", color: "#78716c", marginTop: "4px" }}>
-                  Plot No. 8, Rajeev Vihar, Opposite Metro Pillar No. 30<br />
-                  Mansarovar, Jaipur 302019
-                </p>
-              </div>
-              <div className="print-company-contact">
-                <p>Mob: 9414153909 / 9314021950</p>
-                <p style={{ marginTop: "6px", fontWeight: 600, color: "#1c1917" }}>
-                  Specta Quartz Surfaces — Price List (incl. GST) · 01.04.2026
-                </p>
-              </div>
-            </div>
-
-            {/* Print-only T&C */}
-            <div className="print-toc hidden">
-              <p className="print-toc-title">Terms &amp; Conditions</p>
-              <ol className="print-toc-list">
-                <li>Slab size: 3275 × 1460 mm (129&quot; × 57&quot;) — 51.47 sqft per slab.</li>
-                <li>All prices are inclusive of GST @ 18%.</li>
-                <li>Payment terms: 100% advance.</li>
-                <li>Freight charges are extra and applicable as per delivery location.</li>
-                <li>Prices are subject to change without prior notice.</li>
-                <li>Aashiyana Decor is not responsible for colour variation between digital images and actual slabs.</li>
-              </ol>
-            </div>
-
-            {/* Print-only grid */}
-            <div className="print-grid hidden flex-1">
-              {allItems.filter((q) => likes.has(q.id)).map((q) => (
-                <div key={q.id} className="print-card">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={q.image} alt={q.name} />
-                  <div className="print-card-body">
-                    <p className="print-card-name">{q.name}</p>
-                    <p className="print-card-sub capitalize">
-                      {q.color.replace("_", " ")} · {q.sku ?? ""}{q.price ? ` · ₹${q.price.toLocaleString("en-IN")}/sqft` : ""}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Print-only footer */}
-            <div className="print-footer hidden">
-              <span>Aashiyana Decor · Jaipur · 9414153909</span>
-              <span>This is a computer-generated quotation and does not require a signature.</span>
-            </div>
           </div>
         </div>
 
