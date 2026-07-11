@@ -27,5 +27,17 @@
   { "id": 26, "name": "Lustre Grey",          "slug": "lustre-grey",          "image": "/quartz/lustre-grey.png",          "color": "grey" },
   { "id": 27, "name": "Lustre Red",           "slug": "lustre-red",           "image": "/quartz/lustre-red.png",           "color": "red" },
   { "id": 28, "name": "Magic Night",          "slug": "magic-night",          "image": "/quartz/magic-night.png",          "color": "dark_grey" },
-  { "id": 29, "name": "Mint Mirage",          "slug": "mint-mirage",          "image": "/quartz/mint-mirage.png",          "color": "green" }
+  { "id": 29, "name": "Mint Mirage",          "slug": "mint-mirage",          "image": "/quartz/mint-mirage.png",          "color": "green" },
+  { "id": 30, "name": "Morning Mist",         "slug": "morning-mist",         "image": "/quartz/morning-mist.png",         "color": "grey" },
+  { "id": 31, "name": "Natura Beige",         "slug": "natura-beige",         "image": "/quartz/natura-beige.png",         "color": "beige" },
+  { "id": 32, "name": "Natura White",         "slug": "natura-white",         "image": "/quartz/natura-white.png",         "color": "white" },
+  { "id": 33, "name": "Nexus White",          "slug": "nexus-white",          "image": "/quartz/nexus-white.png",          "color": "white" },
+  { "id": 34, "name": "Pure Cemento",         "slug": "pure-cemento",         "image": "/quartz/pure-cemento.png",         "color": "grey" },
+  { "id": 35, "name": "Pure Grey",            "slug": "pure-grey",            "image": "/quartz/pure-grey.png",            "color": "grey" },
+  { "id": 36, "name": "Sawai Emperador",      "slug": "sawai-emperador",      "image": "/quartz/sawai-emperador.png",      "color": "dark_grey" },
+  { "id": 37, "name": "Starry White",         "slug": "starry-white",         "image": "/quartz/starry-white.png",         "color": "white" },
+  { "id": 38, "name": "Super White",          "slug": "super-white",          "image": "/quartz/super-white.png",          "color": "white" },
+  { "id": 39, "name": "Uno Beige",            "slug": "uno-beige",            "image": "/quartz/uno-beige.png",            "color": "beige" },
+  { "id": 40, "name": "Uno Grey",             "slug": "uno-grey",             "image": "/quartz/uno-grey.png",             "color": "grey" },
+  { "id": 41, "name": "Venera",               "slug": "venera",               "image": "/quartz/venera.png",               "color": "cream" }
 ]
