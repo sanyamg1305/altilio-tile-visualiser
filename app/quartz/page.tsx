@@ -354,8 +354,8 @@ export default function QuartzPage() {
                 <p className="print-company-name">Aashiyana Decor</p>
                 <p className="print-company-tag">For Stylish Living</p>
                 <p style={{ fontSize: "10px", color: "#78716c", marginTop: "4px" }}>
-                  Plot No. 08, Rajiv Vihar, Opp. Metro Pillar, Mansarovar Metro Station<br />
-                  Jaipur, Rajasthan – 302019
+                  Plot No. 8, Rajeev Vihar, Opposite Metro Pillar No. 30<br />
+                  Mansarovar, Jaipur 302019
                 </p>
               </div>
               <div className="print-company-contact">
