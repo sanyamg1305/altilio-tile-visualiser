@@ -115,6 +115,7 @@ export default function QuartzPage() {
           .print-header { padding: 24px 24px 16px; border-bottom: 1px solid #e7e5e4; }
           .print-header h1 { font-size: 24px; font-weight: 300; color: #1c1917; margin: 0 0 4px; }
           .print-header p { font-size: 12px; color: #78716c; margin: 0; }
+          .print-slab-info { font-size: 11px; color: #a8a29e; margin-top: 6px; padding-top: 6px; border-top: 1px solid #e7e5e4; }
         }
       `}</style>
 
@@ -138,6 +139,7 @@ export default function QuartzPage() {
             <div>
               <p className="no-print text-stone-500 text-xs uppercase tracking-widest mb-2">Mozart · Surface Solutions</p>
               <h1 className="text-4xl font-light text-white mb-1">Quartz Collection</h1>
+              <p className="print-slab-info hidden">Slab size: 129&quot; × 57&quot; (3275 × 1460 mm) · 51.47 sqft per slab · Prices incl. GST @18%</p>
               <p className="text-stone-400 text-sm">
                 {loading ? "Loading…" : `${sorted.length} surface${sorted.length !== 1 ? "s" : ""}${showLikedOnly ? " · Liked" : ""}`}
               </p>
