@@ -39,5 +39,13 @@
   { "id": 38, "name": "Super White",          "slug": "super-white",          "image": "/quartz/super-white.png",          "color": "white" },
   { "id": 39, "name": "Uno Beige",            "slug": "uno-beige",            "image": "/quartz/uno-beige.png",            "color": "beige" },
   { "id": 40, "name": "Uno Grey",             "slug": "uno-grey",             "image": "/quartz/uno-grey.png",             "color": "grey" },
-  { "id": 41, "name": "Venera",               "slug": "venera",               "image": "/quartz/venera.png",               "color": "cream" }
+  { "id": 41, "name": "Venera",               "slug": "venera",               "image": "/quartz/venera.png",               "color": "cream" },
+  { "id": 42, "name": "Absolute White",       "slug": "absolute-white",       "image": "/quartz/absolute-white.png",       "color": "white" },
+  { "id": 43, "name": "Amazonite",            "slug": "amazonite",            "image": "/quartz/amazonite.png",            "color": "aqua" },
+  { "id": 44, "name": "Azure",                "slug": "azure",                "image": "/quartz/azure.png",                "color": "grey" },
+  { "id": 45, "name": "Black Velvet",         "slug": "black-velvet",         "image": "/quartz/black-velvet.png",         "color": "dark_grey" },
+  { "id": 46, "name": "Blossom White",        "slug": "blossom-white",        "image": "/quartz/blossom-white.png",        "color": "white" },
+  { "id": 47, "name": "White Sand",           "slug": "white-sand",           "image": "/quartz/white-sand.png",           "color": "white" },
+  { "id": 48, "name": "White Vortex",         "slug": "white-vortex",         "image": "/quartz/white-vortex.png",         "color": "white" },
+  { "id": 49, "name": "Winter Grey",          "slug": "winter-grey",          "image": "/quartz/winter-grey.png",          "color": "grey" }
 ]
