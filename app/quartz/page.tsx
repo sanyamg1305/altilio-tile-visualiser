@@ -33,19 +33,6 @@ const SORT_OPTIONS = [
   { value: "price_desc", label: "Price: High–Low"},
 ];
 
-const LIKES_KEY = "quartz_likes";
-
-function getLikes(): Set<number> {
-  if (typeof window === "undefined") return new Set();
-  try {
-    const raw = localStorage.getItem(LIKES_KEY);
-    return new Set(raw ? JSON.parse(raw) : []);
-  } catch { return new Set(); }
-}
-
-function saveLikes(likes: Set<number>) {
-  localStorage.setItem(LIKES_KEY, JSON.stringify([...likes]));
-}
 
 export default function QuartzPage() {
   const [items, setItems] = useState<QuartzItem[]>([]);
@@ -59,7 +46,6 @@ export default function QuartzPage() {
   const [showLikedOnly, setShowLikedOnly] = useState(false);
   const [exporting, setExporting] = useState(false);
 
-  useEffect(() => { setLikes(getLikes()); }, []);
 
   // Fetch all items (unfiltered) so the PDF always has the full liked set
   useEffect(() => {
@@ -88,7 +74,6 @@ export default function QuartzPage() {
     setLikes((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id); else next.add(id);
-      saveLikes(next);
       return next;
     });
   }, []);
