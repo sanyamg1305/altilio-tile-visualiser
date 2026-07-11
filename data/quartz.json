@@ -6,5 +6,14 @@
   { "id": 5,  "name": "Coastal Fog",          "slug": "coastal-fog",          "image": "/quartz/coastal-fog.png",          "color": "grey" },
   { "id": 6,  "name": "Dark Magma",           "slug": "dark-magma",           "image": "/quartz/dark-magma.png",           "color": "dark_grey" },
   { "id": 7,  "name": "Dessert Sand",         "slug": "dessert-sand",         "image": "/quartz/dessert-sand.png",         "color": "beige" },
-  { "id": 8,  "name": "Elan Gray",            "slug": "elan-gray",            "image": "/quartz/elan-gray.png",            "color": "grey" }
+  { "id": 8,  "name": "Elan Gray",            "slug": "elan-gray",            "image": "/quartz/elan-gray.png",            "color": "grey" },
+  { "id": 9,  "name": "Calcatta Emerald",     "slug": "calcatta-emerald",     "image": "/quartz/calcatta-emerald.png",     "color": "green" },
+  { "id": 10, "name": "Calcatta Ornate",      "slug": "calcatta-ornate",      "image": "/quartz/calcatta-ornate.png",      "color": "white" },
+  { "id": 11, "name": "Calcatta Taj",         "slug": "calcatta-taj",         "image": "/quartz/calcatta-taj.png",         "color": "cream" },
+  { "id": 12, "name": "DS Light Grey",        "slug": "ds-light-grey",        "image": "/quartz/ds-light-grey.png",        "color": "grey" },
+  { "id": 13, "name": "Divine Mist",          "slug": "divine-mist",          "image": "/quartz/divine-mist.png",          "color": "white" },
+  { "id": 14, "name": "Dune Mist",            "slug": "dune-mist",            "image": "/quartz/dune-mist.png",            "color": "beige" },
+  { "id": 15, "name": "Fluttering White",     "slug": "fluttering-white",     "image": "/quartz/fluttering-white.png",     "color": "white" },
+  { "id": 16, "name": "Gallium",              "slug": "gallium",              "image": "/quartz/gallium.png",              "color": "grey" },
+  { "id": 17, "name": "Gold Dust",            "slug": "gold-dust",            "image": "/quartz/gold-dust.png",            "color": "beige" }
 ]
