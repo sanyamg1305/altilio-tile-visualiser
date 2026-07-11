@@ -403,6 +403,20 @@ export default function QuartzPage() {
           </div>
         </div>
 
+        {/* Floating Export PDF button */}
+        <div className="no-print fixed bottom-6 right-6 z-40">
+          <button
+            onClick={handleExportPDF}
+            disabled={exporting || likes.size === 0}
+            className="flex items-center gap-2 px-4 py-3 rounded-full bg-white text-stone-900 text-sm font-medium shadow-lg hover:bg-stone-100 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            {exporting ? "Preparing…" : likes.size > 0 ? `Export PDF (${likes.size})` : "Export PDF"}
+          </button>
+        </div>
+
         {/* Lightbox */}
         {selected && (
           <div className="no-print fixed inset-0 z-50 bg-black/90 flex items-end sm:items-center justify-center sm:p-6" onClick={() => setSelected(null)}>
