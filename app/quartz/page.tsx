@@ -107,6 +107,14 @@ export default function QuartzPage() {
           .print-header h1 { font-size: 24px; font-weight: 300; color: #1c1917; margin: 0 0 4px; }
           .print-header p { font-size: 12px; color: #78716c; margin: 0; }
           .print-slab-info { font-size: 11px; color: #a8a29e; margin-top: 6px; padding-top: 6px; border-top: 1px solid #e7e5e4; }
+          .print-company { display: flex; justify-content: space-between; align-items: flex-start; padding: 16px 24px; border-bottom: 2px solid #1c1917; margin-bottom: 0; }
+          .print-company-name { font-size: 20px; font-weight: 700; color: #1c1917; margin: 0 0 2px; }
+          .print-company-tag { font-size: 11px; color: #78716c; font-style: italic; }
+          .print-company-contact { text-align: right; font-size: 11px; color: #57534e; line-height: 1.6; }
+          .print-toc { padding: 14px 24px; background: #fafaf9; border-bottom: 1px solid #e7e5e4; }
+          .print-toc-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #78716c; margin: 0 0 6px; }
+          .print-toc-list { margin: 0; padding-left: 16px; font-size: 10px; color: #57534e; line-height: 1.8; }
+          .print-footer { padding: 12px 24px; border-top: 1px solid #e7e5e4; font-size: 10px; color: #a8a29e; display: flex; justify-content: space-between; margin-top: 16px; }
         }
       `}</style>
 
@@ -303,6 +311,37 @@ export default function QuartzPage() {
               )}
             </div>
 
+            {/* Print-only header */}
+            <div className="print-company hidden">
+              <div>
+                <p className="print-company-name">Aashiyana Decor</p>
+                <p className="print-company-tag">For Stylish Living</p>
+                <p style={{ fontSize: "10px", color: "#78716c", marginTop: "4px" }}>
+                  Plot No. 08, Rajiv Vihar, Opp. Metro Pillar, Mansarovar Metro Station<br />
+                  Jaipur, Rajasthan – 302019
+                </p>
+              </div>
+              <div className="print-company-contact">
+                <p>Mob: 9414153909 / 9314021950</p>
+                <p style={{ marginTop: "6px", fontWeight: 600, color: "#1c1917" }}>
+                  Specta Quartz Surfaces — Price List (incl. GST) · 01.04.2026
+                </p>
+              </div>
+            </div>
+
+            {/* Print-only T&C */}
+            <div className="print-toc hidden">
+              <p className="print-toc-title">Terms &amp; Conditions</p>
+              <ol className="print-toc-list">
+                <li>Slab size: 3275 × 1460 mm (129&quot; × 57&quot;) — 51.47 sqft per slab.</li>
+                <li>All prices are inclusive of GST @ 18%.</li>
+                <li>Payment terms: 100% advance.</li>
+                <li>Freight charges are extra and applicable as per delivery location.</li>
+                <li>Prices are subject to change without prior notice.</li>
+                <li>Aashiyana Decor is not responsible for colour variation between digital images and actual slabs.</li>
+              </ol>
+            </div>
+
             {/* Print-only grid — always shows liked items only */}
             <div className="print-grid hidden flex-1">
               {allItems.filter((q) => likes.has(q.id)).map((q) => (
@@ -318,6 +357,12 @@ export default function QuartzPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Print-only footer */}
+            <div className="print-footer hidden">
+              <span>Aashiyana Decor · Jaipur · 9414153909</span>
+              <span>This is a computer-generated quotation and does not require a signature.</span>
             </div>
           </div>
         </div>
