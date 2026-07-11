@@ -15,5 +15,17 @@
   { "id": 14, "name": "Dune Mist",            "slug": "dune-mist",            "image": "/quartz/dune-mist.png",            "color": "beige" },
   { "id": 15, "name": "Fluttering White",     "slug": "fluttering-white",     "image": "/quartz/fluttering-white.png",     "color": "white" },
   { "id": 16, "name": "Gallium",              "slug": "gallium",              "image": "/quartz/gallium.png",              "color": "grey" },
-  { "id": 17, "name": "Gold Dust",            "slug": "gold-dust",            "image": "/quartz/gold-dust.png",            "color": "beige" }
+  { "id": 17, "name": "Gold Dust",            "slug": "gold-dust",            "image": "/quartz/gold-dust.png",            "color": "beige" },
+  { "id": 18, "name": "Gold Rush",            "slug": "gold-rush",            "image": "/quartz/gold-rush.png",            "color": "beige" },
+  { "id": 19, "name": "Golden Ripples",       "slug": "golden-ripples",       "image": "/quartz/golden-ripples.png",       "color": "beige" },
+  { "id": 20, "name": "Gray Pearl",           "slug": "gray-pearl",           "image": "/quartz/gray-pearl.png",           "color": "grey" },
+  { "id": 21, "name": "Gray Sand",            "slug": "gray-sand",            "image": "/quartz/gray-sand.png",            "color": "grey" },
+  { "id": 22, "name": "Gulmarg Pink",         "slug": "gulmarg-pink",         "image": "/quartz/gulmarg-pink.png",         "color": "pink" },
+  { "id": 23, "name": "Ice Storm",            "slug": "ice-storm",            "image": "/quartz/ice-storm.png",            "color": "white" },
+  { "id": 24, "name": "Lavendar Crest",       "slug": "lavendar-crest",       "image": "/quartz/lavendar-crest.png",       "color": "grey" },
+  { "id": 25, "name": "Lustre Cream",         "slug": "lustre-cream",         "image": "/quartz/lustre-cream.png",         "color": "cream" },
+  { "id": 26, "name": "Lustre Grey",          "slug": "lustre-grey",          "image": "/quartz/lustre-grey.png",          "color": "grey" },
+  { "id": 27, "name": "Lustre Red",           "slug": "lustre-red",           "image": "/quartz/lustre-red.png",           "color": "red" },
+  { "id": 28, "name": "Magic Night",          "slug": "magic-night",          "image": "/quartz/magic-night.png",          "color": "dark_grey" },
+  { "id": 29, "name": "Mint Mirage",          "slug": "mint-mirage",          "image": "/quartz/mint-mirage.png",          "color": "green" }
 ]
