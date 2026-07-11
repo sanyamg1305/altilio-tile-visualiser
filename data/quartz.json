@@ -1,0 +1,10 @@
+[
+  { "id": 1,  "name": "Cappuccino Cream",    "slug": "cappuccino-cream",    "image": "/quartz/cappuccino-cream.png",    "color": "cream" },
+  { "id": 2,  "name": "Castle White",         "slug": "castle-white",         "image": "/quartz/castle-white.png",         "color": "white" },
+  { "id": 3,  "name": "Classic Calacatta",    "slug": "classic-calacatta",    "image": "/quartz/classic-calacatta.png",    "color": "white" },
+  { "id": 4,  "name": "Classique Soapstone",  "slug": "classique-soapstone",  "image": "/quartz/classique-soapstone.png",  "color": "dark_grey" },
+  { "id": 5,  "name": "Coastal Fog",          "slug": "coastal-fog",          "image": "/quartz/coastal-fog.png",          "color": "grey" },
+  { "id": 6,  "name": "Dark Magma",           "slug": "dark-magma",           "image": "/quartz/dark-magma.png",           "color": "dark_grey" },
+  { "id": 7,  "name": "Dessert Sand",         "slug": "dessert-sand",         "image": "/quartz/dessert-sand.png",         "color": "beige" },
+  { "id": 8,  "name": "Elan Gray",            "slug": "elan-gray",            "image": "/quartz/elan-gray.png",            "color": "grey" }
+]

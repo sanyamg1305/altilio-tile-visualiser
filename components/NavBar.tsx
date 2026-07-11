@@ -3,9 +3,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NAV = [
-  { href: "/gallery", label: "Gallery", match: (p: string) => p === "/gallery" },
-  { href: "/admin", label: "Tiles", match: (p: string) => p === "/admin" || p.startsWith("/admin/tiles") },
-  { href: "/admin/filters", label: "Filters", match: (p: string) => p.startsWith("/admin/filters") },
+  { href: "/gallery", label: "Tiles", match: (p: string) => p === "/gallery" },
+  { href: "/quartz", label: "Quartz", match: (p: string) => p.startsWith("/quartz") },
+  { href: "/visualize", label: "Visualize", match: (p: string) => p.startsWith("/visualize") },
+  { href: "/admin", label: "Admin", match: (p: string) => p.startsWith("/admin") },
 ];
 
 export default function NavBar() {

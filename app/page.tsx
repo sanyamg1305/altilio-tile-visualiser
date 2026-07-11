@@ -14,6 +14,28 @@ const FEATURES = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+      </svg>
+    ),
+    title: "Quartz Collection",
+    desc: "11 engineered quartz surfaces for countertops and islands — from Absolute White to Black Azure. Filter by colour.",
+    href: "/quartz",
+    cta: "Browse Quartz →",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zm0 9.75c0-.621.504-1.125 1.125-1.125h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM13.5 6.375c0-.621.504-1.125 1.125-1.125h6c.621 0 1.125.504 1.125 1.125v12c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-12z" />
+      </svg>
+    ),
+    title: "Room Visualizer",
+    desc: "See any tile applied to a real bathroom render. Adjust size, grout colour, and tile colour — all live in your browser.",
+    href: "/visualize",
+    cta: "Try it now →",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3 3h18" />
       </svg>
     ),
@@ -50,8 +72,14 @@ export default function LandingPage() {
           <span className="text-xs text-stone-500 font-medium uppercase tracking-widest mt-0.5">Tiles</span>
         </div>
         <div className="flex items-center gap-3">
+          <Link href="/visualize" className="text-stone-400 hover:text-white text-sm transition-colors hidden sm:block">
+            Visualize
+          </Link>
+          <Link href="/quartz" className="text-stone-400 hover:text-white text-sm transition-colors hidden sm:block">
+            Quartz
+          </Link>
           <Link href="/gallery" className="text-stone-400 hover:text-white text-sm transition-colors hidden sm:block">
-            Browse all
+            Tiles
           </Link>
           <Link
             href="/find"
@@ -108,12 +136,17 @@ export default function LandingPage() {
       </section>
 
       {/* Features */}
-      <section className="border-t border-stone-800 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-800">
+      <section className="border-t border-stone-800 grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-stone-800">
         {FEATURES.map((f) => (
-          <div key={f.title} className="px-10 py-10 flex flex-col gap-3">
+          <div key={f.title} className="px-8 py-10 flex flex-col gap-3">
             <div className="text-stone-400">{f.icon}</div>
             <h3 className="text-white font-semibold text-base">{f.title}</h3>
             <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
+            {"cta" in f && f.href && (
+              <Link href={f.href} className="text-white text-sm font-medium hover:text-stone-300 transition-colors mt-1">
+                {f.cta as string}
+              </Link>
+            )}
           </div>
         ))}
       </section>

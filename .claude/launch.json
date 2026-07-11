@@ -5,6 +5,7 @@
       "name": "altilio-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/sanyamgolechha/Documents/Dad/Tile visualizer/altilio-tile-visualiser",
       "port": 3000,
       "autoPort": false
     }
